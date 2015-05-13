@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 86508fb2266e10b4a926db916edd18e0
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Chapeau
+    100002: Echarpe1
+    100004: Habits
+    100006: Main_droite
+    100008: Main_gauche
+    100010: pCone1
+    100012: pCone2
+    100014: pCone3
+    100016: pCylinder1
+    100018: pCylinder3
+    100020: pCylinder4
+    100022: //RootNode
+    100024: Pied_droit
+    100026: Pied_gauche
+    100028: pSphere1
+    100030: T__te
+    100032: transform1
+    100034: transform2
+    100036: transform3
+    100038: transform4
+    100040: transform5
+    100042: transform6
+    100044: transform7
+    100046: cMuscleBuilder_crv1
+    100048: cMuscleBuilder_crv2
+    100050: cMuscleBuilder_crv3
+    100052: cMuscleBuilder_crv4
+    100054: cMuscleBuilder_crv5
+    100056: cMuscleBuilder_crv6
+    100058: cMuscleBuilder_crv7
+    100060: cMuscleBuilder_grpLen
+    100062: cMuscleBuilder_locAimEnd
+    100064: cMuscleBuilder_locAimStart
+    100066: cMuscleBuilder_surf1
+    100068: MuscleBuilderCamera
+    100070: MuscleBuilderCameraSide
+    100072: "T\xEAte"
+    400000: Chapeau
+    400002: Echarpe1
+    400004: Habits
+    400006: Main_droite
+    400008: Main_gauche
+    400010: pCone1
+    400012: pCone2
+    400014: pCone3
+    400016: pCylinder1
+    400018: pCylinder3
+    400020: pCylinder4
+    400022: //RootNode
+    400024: Pied_droit
+    400026: Pied_gauche
+    400028: pSphere1
+    400030: T__te
+    400032: transform1
+    400034: transform2
+    400036: transform3
+    400038: transform4
+    400040: transform5
+    400042: transform6
+    400044: transform7
+    400046: cMuscleBuilder_crv1
+    400048: cMuscleBuilder_crv2
+    400050: cMuscleBuilder_crv3
+    400052: cMuscleBuilder_crv4
+    400054: cMuscleBuilder_crv5
+    400056: cMuscleBuilder_crv6
+    400058: cMuscleBuilder_crv7
+    400060: cMuscleBuilder_grpLen
+    400062: cMuscleBuilder_locAimEnd
+    400064: cMuscleBuilder_locAimStart
+    400066: cMuscleBuilder_surf1
+    400068: MuscleBuilderCamera
+    400070: MuscleBuilderCameraSide
+    400072: "T\xEAte"
+    2300000: Chapeau
+    2300002: Echarpe1
+    2300004: Habits
+    2300006: Main_droite
+    2300008: Main_gauche
+    2300010: Pied_droit
+    2300012: Pied_gauche
+    2300014: T__te
+    2300016: "T\xEAte"
+    3300000: Chapeau
+    3300002: Echarpe1
+    3300004: Habits
+    3300006: Main_droite
+    3300008: Main_gauche
+    3300010: Pied_droit
+    3300012: Pied_gauche
+    3300014: T__te
+    3300016: "T\xEAte"
+    4300000: Main_gauche
+    4300002: Main_droite
+    4300004: Echarpe1
+    4300006: Pied_gauche
+    4300008: Pied_droit
+    4300010: Chapeau
+    4300012: Habits
+    4300014: T__te
+    4300016: "T\xEAte"
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

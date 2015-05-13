@@ -1,0 +1,575 @@
+fileFormatVersion: 2
+guid: e1d5387084c56a741bfb48bb1434f05f
+timeCreated: 1430813006
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Capsule_1
+    100002: Capsule_2
+    100004: Chapeau
+    100006: Ciel
+    100008: Corps
+    100010: Cylindre
+    100012: Cylindre_1
+    100014: "C\xF4ne"
+    100016: "C\xF4ne_1"
+    100018: "C\xF4ne_2"
+    100020: Droite__Effecteur_Pied
+    100022: Droite__Pied
+    100024: Droite_Bras
+    100026: //RootNode
+    100028: Gauche__Articulation
+    100030: Gauche__Articulation_2
+    100032: Gauche__Articulation_3
+    100034: Gauche__Articulation_4
+    100036: Gauche__Articulation_5
+    100038: Gauche__Articulation_6
+    100040: Gauche__Effecteur_Main
+    100042: Gauche__Effecteur_Main_2
+    100044: Gauche__Effecteur_Pied
+    100046: Gauche__Main
+    100048: Gauche__Main_2
+    100050: Gauche__Pied
+    100052: Gauche_Avant_bras
+    100054: Gauche_Avant_bras_2
+    100056: Gauche_Bras
+    100058: Perso
+    100060: Pyramide
+    100062: Pyramide_1
+    100064: "Sph\xE8re"
+    100066: "Sph\xE8re_1"
+    100068: "Sph\xE8re_2"
+    100070: Tore
+    100072: Tube
+    100074: Tube_1
+    100076: Tube_2
+    100078: Tube_3
+    100080: "\xE9p\xE9e"
+    400000: Capsule_1
+    400002: Capsule_2
+    400004: Chapeau
+    400006: Ciel
+    400008: Corps
+    400010: Cylindre
+    400012: Cylindre_1
+    400014: "C\xF4ne"
+    400016: "C\xF4ne_1"
+    400018: "C\xF4ne_2"
+    400020: Droite__Effecteur_Pied
+    400022: Droite__Pied
+    400024: Droite_Bras
+    400026: //RootNode
+    400028: Gauche__Articulation
+    400030: Gauche__Articulation_2
+    400032: Gauche__Articulation_3
+    400034: Gauche__Articulation_4
+    400036: Gauche__Articulation_5
+    400038: Gauche__Articulation_6
+    400040: Gauche__Effecteur_Main
+    400042: Gauche__Effecteur_Main_2
+    400044: Gauche__Effecteur_Pied
+    400046: Gauche__Main
+    400048: Gauche__Main_2
+    400050: Gauche__Pied
+    400052: Gauche_Avant_bras
+    400054: Gauche_Avant_bras_2
+    400056: Gauche_Bras
+    400058: Perso
+    400060: Pyramide
+    400062: Pyramide_1
+    400064: "Sph\xE8re"
+    400066: "Sph\xE8re_1"
+    400068: "Sph\xE8re_2"
+    400070: Tore
+    400072: Tube
+    400074: Tube_1
+    400076: Tube_2
+    400078: Tube_3
+    400080: "\xE9p\xE9e"
+    2300000: Capsule_1
+    2300002: Capsule_2
+    2300004: Chapeau
+    2300006: Corps
+    2300008: Cylindre
+    2300010: Cylindre_1
+    2300012: "C\xF4ne"
+    2300014: "C\xF4ne_1"
+    2300016: "C\xF4ne_2"
+    2300018: Droite__Pied
+    2300020: Droite_Bras
+    2300022: Gauche__Articulation
+    2300024: Gauche__Articulation_2
+    2300026: Gauche__Articulation_3
+    2300028: Gauche__Articulation_4
+    2300030: Gauche__Articulation_5
+    2300032: Gauche__Articulation_6
+    2300034: Gauche__Main
+    2300036: Gauche__Main_2
+    2300038: Gauche__Pied
+    2300040: Gauche_Avant_bras
+    2300042: Gauche_Avant_bras_2
+    2300044: Gauche_Bras
+    2300046: Pyramide
+    2300048: Pyramide_1
+    2300050: "Sph\xE8re"
+    2300052: "Sph\xE8re_1"
+    2300054: "Sph\xE8re_2"
+    2300056: Tore
+    2300058: Tube
+    2300060: Tube_1
+    2300062: Tube_2
+    2300064: Tube_3
+    3300000: Capsule_1
+    3300002: Capsule_2
+    3300004: Chapeau
+    3300006: Corps
+    3300008: Cylindre
+    3300010: Cylindre_1
+    3300012: "C\xF4ne"
+    3300014: "C\xF4ne_1"
+    3300016: "C\xF4ne_2"
+    3300018: Droite__Pied
+    3300020: Droite_Bras
+    3300022: Gauche__Articulation
+    3300024: Gauche__Articulation_2
+    3300026: Gauche__Articulation_3
+    3300028: Gauche__Articulation_4
+    3300030: Gauche__Articulation_5
+    3300032: Gauche__Articulation_6
+    3300034: Gauche__Main
+    3300036: Gauche__Main_2
+    3300038: Gauche__Pied
+    3300040: Gauche_Avant_bras
+    3300042: Gauche_Avant_bras_2
+    3300044: Gauche_Bras
+    3300046: Pyramide
+    3300048: Pyramide_1
+    3300050: "Sph\xE8re"
+    3300052: "Sph\xE8re_1"
+    3300054: "Sph\xE8re_2"
+    3300056: Tore
+    3300058: Tube
+    3300060: Tube_1
+    3300062: Tube_2
+    3300064: Tube_3
+    4300000: Corps
+    4300002: Chapeau
+    4300004: Tore
+    4300006: Tube_3
+    4300008: Tube_2
+    4300010: Tube_1
+    4300012: Tube
+    4300014: "Sph\xE8re_1"
+    4300016: "Sph\xE8re"
+    4300018: Capsule_2
+    4300020: Capsule_1
+    4300022: Gauche__Pied
+    4300024: Droite__Pied
+    4300026: Gauche_Bras
+    4300028: Gauche_Avant_bras
+    4300030: Pyramide_1
+    4300032: Pyramide
+    4300034: "C\xF4ne_2"
+    4300036: "C\xF4ne_1"
+    4300038: Cylindre_1
+    4300040: Cylindre
+    4300042: "Sph\xE8re_2"
+    4300044: "C\xF4ne"
+    4300046: Gauche__Main
+    4300048: Gauche__Articulation
+    4300050: Gauche__Articulation_2
+    4300052: Gauche__Articulation_3
+    4300054: Droite_Bras
+    4300056: Gauche_Avant_bras_2
+    4300058: Gauche__Main_2
+    4300060: Gauche__Articulation_4
+    4300062: Gauche__Articulation_5
+    4300064: Gauche__Articulation_6
+    7400000: C4D Animation Take
+    7400002: attack
+    7400004: die
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: C4D Animation Take
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Ciel
+        weight: 1
+      - path: Perso
+        weight: 1
+      - path: Perso/Capsule_1
+        weight: 1
+      - path: Perso/Capsule_2
+        weight: 1
+      - path: Perso/Chapeau
+        weight: 1
+      - path: Perso/Chapeau/Tore
+        weight: 1
+      - path: Perso/Corps
+        weight: 1
+      - path: Perso/Droite__Pied
+        weight: 1
+      - path: Perso/Droite__Pied/Droite__Effecteur_Pied
+        weight: 1
+      - path: Perso/Droite_Bras
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche__Articulation_6
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Articulation_5
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Main_2
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Main_2/Gauche__Articulation_4
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Main_2/Gauche__Effecteur_Main_2
+        weight: 1
+      - path: Perso/Gauche__Pied
+        weight: 1
+      - path: Perso/Gauche__Pied/Gauche__Effecteur_Pied
+        weight: 1
+      - path: Perso/Gauche_Bras
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche__Articulation_3
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Articulation_2
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Main
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Main/Gauche__Articulation
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Main/Gauche__Effecteur_Main
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Cylindre"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Cylindre_1"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/C\xF4ne"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/C\xF4ne_1"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/C\xF4ne_2"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Pyramide"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Pyramide_1"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Sph\xE8re_2"
+        weight: 1
+      - path: "Perso/Sph\xE8re"
+        weight: 1
+      - path: "Perso/Sph\xE8re_1"
+        weight: 1
+      - path: Perso/Tube
+        weight: 1
+      - path: Perso/Tube_1
+        weight: 1
+      - path: Perso/Tube_2
+        weight: 1
+      - path: Perso/Tube_3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: attack
+      takeName: C4D Animation Take
+      firstFrame: 30
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Ciel
+        weight: 1
+      - path: Perso
+        weight: 1
+      - path: Perso/Capsule_1
+        weight: 1
+      - path: Perso/Capsule_2
+        weight: 1
+      - path: Perso/Chapeau
+        weight: 1
+      - path: Perso/Chapeau/Tore
+        weight: 1
+      - path: Perso/Corps
+        weight: 1
+      - path: Perso/Droite__Pied
+        weight: 1
+      - path: Perso/Droite__Pied/Droite__Effecteur_Pied
+        weight: 1
+      - path: Perso/Droite_Bras
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche__Articulation_6
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Articulation_5
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Main_2
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Main_2/Gauche__Articulation_4
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Main_2/Gauche__Effecteur_Main_2
+        weight: 1
+      - path: Perso/Gauche__Pied
+        weight: 1
+      - path: Perso/Gauche__Pied/Gauche__Effecteur_Pied
+        weight: 1
+      - path: Perso/Gauche_Bras
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche__Articulation_3
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Articulation_2
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Main
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Main/Gauche__Articulation
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Main/Gauche__Effecteur_Main
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Cylindre"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Cylindre_1"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/C\xF4ne"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/C\xF4ne_1"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/C\xF4ne_2"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Pyramide"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Pyramide_1"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Sph\xE8re_2"
+        weight: 1
+      - path: "Perso/Sph\xE8re"
+        weight: 1
+      - path: "Perso/Sph\xE8re_1"
+        weight: 1
+      - path: Perso/Tube
+        weight: 1
+      - path: Perso/Tube_1
+        weight: 1
+      - path: Perso/Tube_2
+        weight: 1
+      - path: Perso/Tube_3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: die
+      takeName: C4D Animation Take
+      firstFrame: 60
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Ciel
+        weight: 1
+      - path: Perso
+        weight: 1
+      - path: Perso/Capsule_1
+        weight: 1
+      - path: Perso/Capsule_2
+        weight: 1
+      - path: Perso/Chapeau
+        weight: 1
+      - path: Perso/Chapeau/Tore
+        weight: 1
+      - path: Perso/Corps
+        weight: 1
+      - path: Perso/Droite__Pied
+        weight: 1
+      - path: Perso/Droite__Pied/Droite__Effecteur_Pied
+        weight: 1
+      - path: Perso/Droite_Bras
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche__Articulation_6
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Articulation_5
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Main_2
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Main_2/Gauche__Articulation_4
+        weight: 1
+      - path: Perso/Droite_Bras/Gauche_Avant_bras_2/Gauche__Main_2/Gauche__Effecteur_Main_2
+        weight: 1
+      - path: Perso/Gauche__Pied
+        weight: 1
+      - path: Perso/Gauche__Pied/Gauche__Effecteur_Pied
+        weight: 1
+      - path: Perso/Gauche_Bras
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche__Articulation_3
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Articulation_2
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Main
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Main/Gauche__Articulation
+        weight: 1
+      - path: Perso/Gauche_Bras/Gauche_Avant_bras/Gauche__Main/Gauche__Effecteur_Main
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Cylindre"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Cylindre_1"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/C\xF4ne"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/C\xF4ne_1"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/C\xF4ne_2"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Pyramide"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Pyramide_1"
+        weight: 1
+      - path: "Perso/Gauche_Bras/Gauche_Avant_bras/\xE9p\xE9e/Sph\xE8re_2"
+        weight: 1
+      - path: "Perso/Sph\xE8re"
+        weight: 1
+      - path: "Perso/Sph\xE8re_1"
+        weight: 1
+      - path: Perso/Tube
+        weight: 1
+      - path: Perso/Tube_1
+        weight: 1
+      - path: Perso/Tube_2
+        weight: 1
+      - path: Perso/Tube_3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

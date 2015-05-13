@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 008d2f8a73223914aac913641ceae6e9
+timeCreated: 1429890319
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Chapeau
+    100002: Habits
+    100004: Main_droite
+    100006: Main_gauche
+    100008: //RootNode
+    100010: pCone1
+    100012: pCone2
+    100014: pCone3
+    100016: pCone4
+    100018: pCone5
+    100020: pCone6
+    100022: pCylinder1
+    100024: pCylinder3
+    100026: pCylinder4
+    100028: Pied_droit
+    100030: Pied_gauche
+    100032: pSphere1
+    100034: transform1
+    100036: transform2
+    100038: transform3
+    100040: transform4
+    100042: transform5
+    100044: transform6
+    100046: transform7
+    100048: "T\xEAte"
+    400000: Chapeau
+    400002: Habits
+    400004: Main_droite
+    400006: Main_gauche
+    400008: //RootNode
+    400010: pCone1
+    400012: pCone2
+    400014: pCone3
+    400016: pCone4
+    400018: pCone5
+    400020: pCone6
+    400022: pCylinder1
+    400024: pCylinder3
+    400026: pCylinder4
+    400028: Pied_droit
+    400030: Pied_gauche
+    400032: pSphere1
+    400034: transform1
+    400036: transform2
+    400038: transform3
+    400040: transform4
+    400042: transform5
+    400044: transform6
+    400046: transform7
+    400048: "T\xEAte"
+    2300000: Chapeau
+    2300002: Habits
+    2300004: Main_droite
+    2300006: Main_gauche
+    2300008: pCone4
+    2300010: pCone5
+    2300012: pCone6
+    2300014: Pied_droit
+    2300016: Pied_gauche
+    2300018: "T\xEAte"
+    3300000: Chapeau
+    3300002: Habits
+    3300004: Main_droite
+    3300006: Main_gauche
+    3300008: pCone4
+    3300010: pCone5
+    3300012: pCone6
+    3300014: Pied_droit
+    3300016: Pied_gauche
+    3300018: "T\xEAte"
+    4300000: Main_gauche
+    4300002: Main_droite
+    4300004: Pied_gauche
+    4300006: Pied_droit
+    4300008: Chapeau
+    4300010: Habits
+    4300012: "T\xEAte"
+    4300014: pCone4
+    4300016: pCone5
+    4300018: pCone6
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
