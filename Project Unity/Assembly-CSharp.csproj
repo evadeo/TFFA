@@ -61,6 +61,7 @@
      <Compile Include="Assets\Multiplayer\Scripts\PersoMulti.cs" />
      <Compile Include="Assets\Scripts\AI.cs" />
      <Compile Include="Assets\Scripts\AllerDansScene.cs" />
+     <Compile Include="Assets\Scripts\Attaque glace Script.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\FireballScript.cs" />
      <Compile Include="Assets\Scripts\Fireballmovement.cs" />
