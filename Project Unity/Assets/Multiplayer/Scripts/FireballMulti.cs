@@ -5,7 +5,6 @@ public class FireballMulti : MonoBehaviour
 {
 		public Transform fireballbullet;
 		public Transform player;
-		public Rigidbody fumee;
 		public int manacost;
 		public string key;
 		public Transform spawn;
@@ -28,4 +27,9 @@ public class FireballMulti : MonoBehaviour
 						}
 					}
 		}
+
+	private IEnumerator WaitForCD()
+	{
+		yield return new WaitForSeconds(2.5f);
+	}
 }

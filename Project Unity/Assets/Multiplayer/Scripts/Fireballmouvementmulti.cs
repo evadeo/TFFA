@@ -4,12 +4,18 @@ using System.Collections;
 public class Fireballmouvementmulti : MonoBehaviour {
 
 	public Rigidbody RB;
-	public Rigidbody fumee;
 	//SphereCollider sc;
 	public float Force;
 	public float rayon = 3f;
 	GameObject[] ennemies;
 	bool b;
+	private float lastSynchronizationTime = 0f;
+	private float syncDelay = 0f;
+	private float syncTime = 0f;
+	private Vector3 syncStartPosition = Vector3.zero;
+	private Vector3 syncEndPosition = Vector3.zero;
+
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -24,7 +30,33 @@ public class Fireballmouvementmulti : MonoBehaviour {
 	{
 		ennemies = GameObject.FindGameObjectsWithTag ("Character");
 	}
-	
+
+
+	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+	{
+		Vector3 syncPosition = Vector3.zero;
+		if (stream.isWriting)
+		{
+			syncPosition = RB.GetComponent<Rigidbody>().position;
+			stream.Serialize(ref syncPosition);
+		}
+		else
+		{
+			stream.Serialize(ref syncPosition);
+			syncTime = 0f;
+			syncDelay = Time.time - lastSynchronizationTime;
+			lastSynchronizationTime = Time.time;
+			RB.GetComponent<Rigidbody>().position = syncStartPosition;
+			syncEndPosition = syncPosition;
+		}
+	}
+	private void SyncedMovement(){
+		syncTime += Time.deltaTime;
+		RB.GetComponent<Rigidbody> ().position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
+	}
+
+
+
 	void OnTriggerEnter (Collider collider)
 	{
 		if (b) {
@@ -32,7 +64,6 @@ public class Fireballmouvementmulti : MonoBehaviour {
 			if (collider.tag == "Character") {
 			}
 			RB.AddRelativeForce (Vector3.forward * Force * 0.2f);
-			UnityEngine.GameObject smoke = Network.Instantiate (fumee, collider.transform.position + Vector3.up, Quaternion.identity,0) as GameObject;
 			foreach (GameObject go in ennemies) {
 				if (go != null) {
 					float my_x = go.transform.position.x - RB.transform.position.x;
@@ -50,8 +81,6 @@ public class Fireballmouvementmulti : MonoBehaviour {
 			b = false;
 			Wait(0.3f);
 			Network.Destroy (gameObject);
-			Wait(4f);
-			Network.Destroy(smoke);
 		}
 		
 	}

@@ -4,14 +4,15 @@ using System.Collections;
 public class NetworkManager : MonoBehaviour
 {
 	private string typeName = "UniqueGameName";
-	private string gameName = "RoomName";
-	private string playerName = "playerName";
+	private string gameName = "Nom du salon";
+	private string playerName = "Pseudo";
 	public GameObject player;
 	public GameObject cam;
 	public GameObject spawnpoint;
 	private float x;
 	private float y;
 	private float z;
+	private bool coop = false;
 
 
 
@@ -40,16 +41,26 @@ public class NetworkManager : MonoBehaviour
 		if (!Network.isClient && !Network.isServer ) {
 			Cursor.visible = true;
 			playerName = GUI.TextField (new Rect (Screen.width / 3,Screen.height / 20, Screen.width / 7, 20), playerName);
-			GUI.Label (new Rect (5 * Screen.width / 10, Screen.height / 4 + Screen.height / 16, Screen.width / 7, Screen.height / 8), "Liste des serveurs:");
-			gameName = GUI.TextField (new Rect (Screen.width / 10, Screen.height / 2 + Screen.height / 16, Screen.width / 7, 20), gameName);
-			if (!Network.isClient && !Network.isServer)
-				if (GUI.Button (new Rect (Screen.width / 10, 3 * Screen.height / 4, Screen.width / 7, Screen.height / 8), "Démarrer un serveur"))
+			gameName = GUI.TextField (new Rect (Screen.width / 10, Screen.height / 4 + Screen.height / 16, Screen.width / 7, 20), gameName);
+
+			if (GUI.Button (new Rect (Screen.width / 10, 3 * Screen.height / 4, Screen.width / 7, Screen.height / 8), "Démarrer un serveur"))
 					StartServer ();
-			if (GUI.Button (new Rect (Screen.width / 10, Screen.height / 4, Screen.width / 7, Screen.height / 8), "Rafraichir la liste"))
+
+			if (!coop)
+			{
+				if (GUI.Button (new Rect (Screen.width / 10, 4 * Screen.height / 8, Screen.width / 7, Screen.height / 8), "Mode Duel"))
+						coop = true;
+			}
+			else 
+				if (GUI.Button (new Rect (Screen.width / 10, 4 * Screen.height / 8, Screen.width / 7, Screen.height / 8), "Mode Cooperation"))
+						coop = false;
+
+			GUI.Label (new Rect (5 * Screen.width / 10, Screen.height / 4 + Screen.height / 16, Screen.width / 7, Screen.height / 8), "Liste des serveurs:");
+			if (GUI.Button (new Rect (4.8f * Screen.width / 10, 3.7f * Screen.height / 9 , Screen.width / 7, Screen.height / 8), "Rafraichir la liste"))
 				RefreshHostList ();
 			if (hostList != null) {
 				for (int i = 0; i < hostList.Length; i++) {
-					if (GUI.Button (new Rect (6 * Screen.width / 10, Screen.height / 4 + (Screen.height / 7 * i), Screen.width / 7, Screen.height / 8), hostList [i].gameName + "\nJoueurs : " + hostList [i].connectedPlayers + "/" + hostList [i].playerLimit))
+					if (GUI.Button (new Rect (7 * Screen.width / 10, Screen.height / 4 + (Screen.height / 7 * i), Screen.width / 7, Screen.height / 8), hostList [i].gameName + "\nJoueurs : " + hostList [i].connectedPlayers + "/" + hostList [i].playerLimit))
 						JoinServer (hostList [i]);
 				}
 			}
