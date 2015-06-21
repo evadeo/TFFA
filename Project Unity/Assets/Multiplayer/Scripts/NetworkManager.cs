@@ -3,7 +3,7 @@ using System.Collections;
 
 public class NetworkManager : MonoBehaviour
 {
-	private string typeName = "UniqueGameName";
+	private string typeName = "Duel";
 	private string gameName = "Nom du salon";
 	private string playerName = "Pseudo";
 	public GameObject player;
@@ -12,7 +12,8 @@ public class NetworkManager : MonoBehaviour
 	private float x;
 	private float y;
 	private float z;
-	private bool coop = false;
+	public static bool coop = false;
+	public GameObject spawnEnnemies;
 
 
 
@@ -20,7 +21,7 @@ public class NetworkManager : MonoBehaviour
 	{
 		RefreshHostList ();
 		if (hostList != null) {
-				Network.InitializeServer (4, 25000, !Network.HavePublicAddress ());
+				Network.InitializeServer (1, 25000, !Network.HavePublicAddress ());
 				MasterServer.RegisterHost (typeName, gameName);
 		} else
 				GUI.Label (new Rect (Screen.width / 10, 8 * Screen.height / 10, Screen.width / 7, Screen.height / 8), "Ce nom est déjà utilisé");
@@ -34,7 +35,8 @@ public class NetworkManager : MonoBehaviour
 
 	void OnPlayerConnected () 
 	{
-				
+				if (coop)
+						Network.Instantiate (spawnEnnemies, new Vector3 (188, 2, 262), Quaternion.identity, 2);
 	}
 	void OnGUI ()
 	{
@@ -49,19 +51,27 @@ public class NetworkManager : MonoBehaviour
 			if (!coop)
 			{
 				if (GUI.Button (new Rect (Screen.width / 10, 4 * Screen.height / 8, Screen.width / 7, Screen.height / 8), "Mode Duel"))
+				{
+					typeName = "Coop";
 						coop = true;
+				}
 			}
 			else 
 				if (GUI.Button (new Rect (Screen.width / 10, 4 * Screen.height / 8, Screen.width / 7, Screen.height / 8), "Mode Cooperation"))
-						coop = false;
-
+			{
+				coop = false;
+				typeName = "Duel";
+			}
 			GUI.Label (new Rect (5 * Screen.width / 10, Screen.height / 4 + Screen.height / 16, Screen.width / 7, Screen.height / 8), "Liste des serveurs:");
 			if (GUI.Button (new Rect (4.8f * Screen.width / 10, 3.7f * Screen.height / 9 , Screen.width / 7, Screen.height / 8), "Rafraichir la liste"))
 				RefreshHostList ();
 			if (hostList != null) {
 				for (int i = 0; i < hostList.Length; i++) {
 					if (GUI.Button (new Rect (7 * Screen.width / 10, Screen.height / 4 + (Screen.height / 7 * i), Screen.width / 7, Screen.height / 8), hostList [i].gameName + "\nJoueurs : " + hostList [i].connectedPlayers + "/" + hostList [i].playerLimit))
+					{
 						JoinServer (hostList [i]);
+						typeName = hostList[i].gameType;
+					}
 				}
 			}
 			if (Network.isServer) 
@@ -83,6 +93,7 @@ public class NetworkManager : MonoBehaviour
 	private void JoinServer (HostData hostData)
 	{
 		Network.Connect (hostData);
+
 	}
 	
 	void OnConnectedToServer ()

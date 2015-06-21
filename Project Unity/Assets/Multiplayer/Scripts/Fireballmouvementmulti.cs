@@ -9,6 +9,7 @@ public class Fireballmouvementmulti : MonoBehaviour {
 	public float rayon = 3f;
 	GameObject[] ennemies;
 	bool b;
+	int compteur = 0;
 	private float lastSynchronizationTime = 0f;
 	private float syncDelay = 0f;
 	private float syncTime = 0f;
@@ -22,13 +23,16 @@ public class Fireballmouvementmulti : MonoBehaviour {
 		//sc = GetComponent<SphereCollider> ();
 		RB.AddRelativeForce (Vector3.forward * -Force);
 		ennemies = GameObject.FindGameObjectsWithTag ("Character");
-		b = true;
+		b = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
 		ennemies = GameObject.FindGameObjectsWithTag ("Character");
+		compteur++;
+		if (!b)
+			b = compteur == 5;
 	}
 
 
@@ -73,10 +77,10 @@ public class Fireballmouvementmulti : MonoBehaviour {
 					{
 						Debug.Log ("tag rayon: " + go.tag + " " + (go.name == "Perso(Clone)") + go.name);
 						Debug.Log ("oui");
-						GameObject objet = GameObject.FindGameObjectWithTag("Joueur");
-						objet.SendMessage("degats", 15, SendMessageOptions.DontRequireReceiver);
+						if (!(NetworkManager.coop  && go.name == "Perso Principal FInal 1"))
+							go.SendMessage("degats", 40, SendMessageOptions.DontRequireReceiver);
 					}
-				}
+				}	
 			}
 			b = false;
 			Wait(0.3f);

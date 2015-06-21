@@ -53,6 +53,7 @@
      <Compile Include="Assets\Menu\Option.cs" />
      <Compile Include="Assets\Modelisation\Personnage\Perso principal\DeplacementsPP.cs" />
      <Compile Include="Assets\Mouvement_Enemy.cs" />
+     <Compile Include="Assets\Multiplayer\Scripts\AIMulti.cs" />
      <Compile Include="Assets\Multiplayer\Scripts\CameraMulti.cs" />
      <Compile Include="Assets\Multiplayer\Scripts\DeplacementsMulti.cs" />
      <Compile Include="Assets\Multiplayer\Scripts\FireballMulti.cs" />

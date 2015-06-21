@@ -104,7 +104,7 @@ public class PersoMulti : MonoBehaviour {
 			if (Health == 0) {
 				Network.Instantiate(explosion, player.transform.position,player.transform.rotation, 0);
 				Health = 0;
-				Network.Destroy(player);
+				Network.Destroy(parent);
 			}
 		compteur++;
 		}

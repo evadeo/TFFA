@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AI : MonoBehaviour
+public class AIMulti : MonoBehaviour
 {
-
+	
 		public int health;
-
+	
 		public int Health {
 				get { return health; }
 				set {
@@ -18,9 +18,9 @@ public class AI : MonoBehaviour
 								health = value;
 				}
 		}
-
+	
 		private int max_health;
-
+	
 		public int Max_Health {
 				get { return max_health;}
 				set {
@@ -30,38 +30,50 @@ public class AI : MonoBehaviour
 								max_health = value;
 				}
 		}
-
+	
 		protected  Vector3 moveDirection;
 		public  float speed;
-		private  float delayRotation;
-		private  float changeRotation;
-		private  float newRotation;
 		private  CharacterController controller;
 		public GameObject player;
 		public Transform explosion;
 		private bool dead;
+		private GameObject[] players;
 		private RaycastHit hit;
 		private Vector3 dirToMain;
 		private int compteur;
+	private float lastSynchronizationTime = 0f;
+	private float syncDelay = 0f;
+	private float syncTime = 0f;
+	private Vector3 syncStartPosition = Vector3.zero;
+	private Vector3 syncEndPosition = Vector3.zero;
 
 		// Use this for initialization
 		void Start ()
 		{
-				delayRotation = Random.Range (1, 6);
 				controller = (CharacterController)GetComponent ("CharacterController");
 				Max_Health = 20;
 				Health = Max_Health;
 				dead = false;
-				newRotation = Random.Range (0, 361);
 				compteur = 20;
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-				dirToMain = GameObject.Find ("Perso(Clone)").transform.position - transform.position;
-				dirToMain.y = 0;
-	
+				try {
+						players = GameObject.FindGameObjectsWithTag ("GameController");
+			float p1 = Vector3.Distance (player.transform.position, players [0].transform.position);
+			float p2 = Vector3.Distance (player.transform.position, players [1].transform.position);
+			if (Mathf.Min (p1, p2) == p1)
+				dirToMain = players [0].transform.position;
+			else 
+				dirToMain = players [1].transform.position;
+			dirToMain.y = 0;
+				} catch {
+
+				}
+				
+		
 				move ();
 				if (Health == 0 && !dead) { 
 						Instantiate (explosion, player.transform.position, player.transform.rotation);
@@ -72,11 +84,11 @@ public class AI : MonoBehaviour
 						dead = true;
 				}
 		}
-
+	
 		private void move ()
 		{
 				if (!dead) {
-
+			
 						if (dirToMain.magnitude < 2) {
 								moveDirection = dirToMain * 0f; //ennemi s'arrete
 								controller.Move (moveDirection * Time.deltaTime); 
@@ -88,33 +100,42 @@ public class AI : MonoBehaviour
 										PersoPrincipal.Health -= 30;
 								}
 						} else {
-								if (Time.fixedTime % delayRotation == 0) {
-										newRotation = Random.Range (0, 361);
-								}
-								if (dirToMain.magnitude < 10) {
-										moveDirection = dirToMain * 0.5f;
-										transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (dirToMain), 10f * Time.deltaTime);
-								} else {
-										moveDirection = Vector3.forward * speed;
-										moveDirection = transform.TransformDirection (moveDirection);
-										try {
-												if (Physics.Raycast (transform.Find ("origin").position, transform.forward, out hit)) {
-														if (hit.distance < 7) {
-																transform.rotation = Quaternion.Slerp (transform.rotation, transform.rotation * Quaternion.Euler (0, 180, 0), 0.5f * Time.deltaTime);
-														} else {
-																transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler (0, newRotation, 0), 0.5f * Time.deltaTime);
-														}
-												}
-										} catch {
-												transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler (0, newRotation, 0), 0.5f * Time.deltaTime);
-										}
-								}
-								transform.GetComponent<Animation> ().CrossFade ("run", 0.5f * Time.deltaTime);
-								moveDirection.y -= 4;
-								controller.Move (moveDirection * Time.deltaTime);
+								
+								moveDirection = dirToMain * 0.5f;
+								transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (dirToMain), 10f * Time.deltaTime);
+
 						}
+						transform.GetComponent<Animation> ().CrossFade ("run", 0.5f * Time.deltaTime);
+						moveDirection.y -= 4;
+						controller.Move (moveDirection * Time.deltaTime);
 				}
 		}
+
+
+	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+	{
+		Vector3 syncPosition = Vector3.zero;
+		if (stream.isWriting)
+		{
+			syncPosition = player.GetComponent<Rigidbody>().position;
+		stream.Serialize(ref syncPosition);
+	}
+	else
+	{
+		stream.Serialize(ref syncPosition);
+		syncTime = 0f;
+		syncDelay = Time.time - lastSynchronizationTime;
+		lastSynchronizationTime = Time.time;
+			player.GetComponent<Rigidbody>().position = syncStartPosition;
+		syncEndPosition = syncPosition;
+	}
+}
+private void SyncedMovement(){
+	syncTime += Time.deltaTime;
+		player.GetComponent<Rigidbody> ().position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
+}
+
+
 
 		private IEnumerator WaitForAnimation ()
 		{

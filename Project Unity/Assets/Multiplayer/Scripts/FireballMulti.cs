@@ -24,6 +24,7 @@ public class FireballMulti : MonoBehaviour
 								float my_y = player.rotation.eulerAngles.y + 180;
 								Network.Instantiate (fireballbullet, spawn.position, Quaternion.Euler (0, my_y, 0),0);
 								PersoMulti.Mana -= 10;
+				WaitForCD();
 						}
 					}
 		}
