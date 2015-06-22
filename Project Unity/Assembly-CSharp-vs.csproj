@@ -66,6 +66,8 @@
      <Compile Include="Assets\Scripts\FireballScript.cs" />
      <Compile Include="Assets\Scripts\Fireballmovement.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
+     <Compile Include="Assets\Scripts\IceAttackMovement.cs" />
+     <Compile Include="Assets\Scripts\IceAttackScript.cs" />
      <Compile Include="Assets\Scripts\Maitre_mage.cs" />
      <Compile Include="Assets\Scripts\ManaBar.cs" />
      <Compile Include="Assets\Scripts\PersoPrincipal.cs" />
