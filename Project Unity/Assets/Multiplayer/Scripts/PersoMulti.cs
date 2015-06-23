@@ -115,4 +115,8 @@ public class PersoMulti : MonoBehaviour {
 		Health -= dmg;
 
 		}
+	void degats(Transform source){
+
+		}
+
 }

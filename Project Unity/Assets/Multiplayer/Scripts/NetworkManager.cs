@@ -5,7 +5,7 @@ public class NetworkManager : MonoBehaviour
 {
 	private string typeName = "Duel";
 	private string gameName = "Nom du salon";
-	private string playerName = "Pseudo";
+	private static string playerName = "Pseudo";
 	public GameObject player;
 	public GameObject cam;
 	public GameObject spawnpoint;

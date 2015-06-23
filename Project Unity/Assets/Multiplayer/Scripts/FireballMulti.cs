@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FireballMulti : MonoBehaviour
+public class FireballMulti : ScriptableObject
 {
 		public Transform fireballbullet;
 		public Transform player;
@@ -22,7 +22,9 @@ public class FireballMulti : MonoBehaviour
 					if (Input.GetKeyUp (key)) {
 						if (PersoMulti.Mana >= manacost) {
 								float my_y = player.rotation.eulerAngles.y + 180;
-								Network.Instantiate (fireballbullet, spawn.position, Quaternion.Euler (0, my_y, 0),0);
+				                
+				Fireballmouvementmulti f = ScriptableObject.CreateInstance<Fireballmouvementmulti>();
+				f.Fbmm(player, 40, spawn, fireballbullet, my_y);
 								PersoMulti.Mana -= 10;
 				WaitForCD();
 						}

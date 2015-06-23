@@ -17,7 +17,7 @@ public class SquadSpawn : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 				int x = 0;
-				if (Time.fixedTime % (11 - PersoPrincipal.level + Random.Range (-5, 10)) == 0) {
+				if (Time.fixedTime % (Random.Range(10,20)) == 0) {
 						x = Random.Range (1, 3);
 						switch (x) {
 						case 1:

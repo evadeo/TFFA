@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class AIMulti : MonoBehaviour
 {
 	
@@ -41,12 +42,12 @@ public class AIMulti : MonoBehaviour
 		private RaycastHit hit;
 		private Vector3 dirToMain;
 		private int compteur;
-	private float lastSynchronizationTime = 0f;
-	private float syncDelay = 0f;
-	private float syncTime = 0f;
-	private Vector3 syncStartPosition = Vector3.zero;
-	private Vector3 syncEndPosition = Vector3.zero;
-
+		private float lastSynchronizationTime = 0f;
+		private float syncDelay = 0f;
+		private float syncTime = 0f;
+		private Vector3 syncStartPosition = Vector3.zero;
+		private Vector3 syncEndPosition = Vector3.zero;
+	private GameObject ennemy;
 		// Use this for initialization
 		void Start ()
 		{
@@ -62,15 +63,21 @@ public class AIMulti : MonoBehaviour
 		{
 				try {
 						players = GameObject.FindGameObjectsWithTag ("GameController");
-			float p1 = Vector3.Distance (player.transform.position, players [0].transform.position);
-			float p2 = Vector3.Distance (player.transform.position, players [1].transform.position);
-			if (Mathf.Min (p1, p2) == p1)
-				dirToMain = players [0].transform.position;
-			else 
-				dirToMain = players [1].transform.position;
-			dirToMain.y = 0;
+						float p1 = Vector3.Distance (player.transform.position, players [0].transform.position);
+						float p2 = Vector3.Distance (player.transform.position, players [1].transform.position);
+						if (Mathf.Min (p1, p2) == p1)
+			{
+								dirToMain = players [0].transform.position;
+				ennemy = players[0];
+			}
+						else 
+			{
+								dirToMain = players [1].transform.position;
+				ennemy = players[1];
+			}
 				} catch {
-
+			dirToMain = Vector3.forward;
+			ennemy = player;
 				}
 				
 		
@@ -97,12 +104,13 @@ public class AIMulti : MonoBehaviour
 								compteur++;
 								if (compteur % 60 == 0) { // à 60 fps on à ici une minute
 										compteur = 0;
-										PersoPrincipal.Health -= 30;
+										ennemy.SendMessage("degats", 25);
 								}
 						} else {
 								
 								moveDirection = dirToMain * 0.5f;
-								transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (dirToMain), 10f * Time.deltaTime);
+				transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (dirToMain), 10f * Time.deltaTime);
+								
 
 						}
 						transform.GetComponent<Animation> ().CrossFade ("run", 0.5f * Time.deltaTime);
@@ -111,31 +119,27 @@ public class AIMulti : MonoBehaviour
 				}
 		}
 
-
-	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
-	{
-		Vector3 syncPosition = Vector3.zero;
-		if (stream.isWriting)
+		void OnSerializeNetworkView (BitStream stream, NetworkMessageInfo info)
 		{
-			syncPosition = player.GetComponent<Rigidbody>().position;
-		stream.Serialize(ref syncPosition);
-	}
-	else
-	{
-		stream.Serialize(ref syncPosition);
-		syncTime = 0f;
-		syncDelay = Time.time - lastSynchronizationTime;
-		lastSynchronizationTime = Time.time;
-			player.GetComponent<Rigidbody>().position = syncStartPosition;
-		syncEndPosition = syncPosition;
-	}
-}
-private void SyncedMovement(){
-	syncTime += Time.deltaTime;
-		player.GetComponent<Rigidbody> ().position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
-}
+				Vector3 syncPosition = Vector3.zero;
+				if (stream.isWriting) {
+						syncPosition = player.GetComponent<Rigidbody> ().position;
+						stream.Serialize (ref syncPosition);
+				} else {
+						stream.Serialize (ref syncPosition);
+						syncTime = 0f;
+						syncDelay = Time.time - lastSynchronizationTime;
+						lastSynchronizationTime = Time.time;
+						player.GetComponent<Rigidbody> ().position = syncStartPosition;
+						syncEndPosition = syncPosition;
+				}
+		}
 
-
+		private void SyncedMovement ()
+		{
+				syncTime += Time.deltaTime;
+				player.GetComponent<Rigidbody> ().position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
+		}
 
 		private IEnumerator WaitForAnimation ()
 		{
@@ -146,7 +150,7 @@ private void SyncedMovement(){
 		{
 				Health -= dmg;
 		}
-	
+
 		private void OnControllerColliderHit (ControllerColliderHit hit)
 		{
 				if (hit.transform.name != "Terrain") {

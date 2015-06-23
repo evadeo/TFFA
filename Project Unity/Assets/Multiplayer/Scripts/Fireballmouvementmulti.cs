@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fireballmouvementmulti : MonoBehaviour {
+public class Fireballmouvementmulti : ScriptableObject {
 
 	public Rigidbody RB;
 	//SphereCollider sc;
@@ -15,24 +15,28 @@ public class Fireballmouvementmulti : MonoBehaviour {
 	private float syncTime = 0f;
 	private Vector3 syncStartPosition = Vector3.zero;
 	private Vector3 syncEndPosition = Vector3.zero;
-
-
 	// Use this for initialization
 	void Start ()
 	{
+
 		//sc = GetComponent<SphereCollider> ();
 		RB.AddRelativeForce (Vector3.forward * -Force);
 		ennemies = GameObject.FindGameObjectsWithTag ("Character");
 		b = false;
 	}
-	
+	public Fireballmouvementmulti(){
+		}
+	public void Fbmm(Transform origin, int dmg, Transform spawn, Transform fireballbullet, float my_y)
+	{
+		Network.Instantiate (fireballbullet, spawn.position, Quaternion.Euler (0, my_y, 0),0);
+	}
 	// Update is called once per frame
 	void Update ()
 	{
 		ennemies = GameObject.FindGameObjectsWithTag ("Character");
 		compteur++;
 		if (!b)
-			b = compteur == 5;
+			b = compteur == 1;
 	}
 
 
@@ -64,10 +68,6 @@ public class Fireballmouvementmulti : MonoBehaviour {
 	void OnTriggerEnter (Collider collider)
 	{
 		if (b) {
-			Debug.Log ("tag: " + collider.tag);
-			if (collider.tag == "Character") {
-			}
-			RB.AddRelativeForce (Vector3.forward * Force * 0.2f);
 			foreach (GameObject go in ennemies) {
 				if (go != null) {
 					float my_x = go.transform.position.x - RB.transform.position.x;
@@ -75,16 +75,15 @@ public class Fireballmouvementmulti : MonoBehaviour {
 					float my_z = go.transform.position.z - RB.transform.position.z;
 					if ( Mathf.Abs(my_x) <= rayon && Mathf.Abs(my_y) <= rayon && Mathf.Abs(my_z) <= rayon)
 					{
-						Debug.Log ("tag rayon: " + go.tag + " " + (go.name == "Perso(Clone)") + go.name);
-						Debug.Log ("oui");
+						Debug.Log ("tag rayon: " + go.tag + " "  + go.name);
 						if (!(NetworkManager.coop  && go.name == "Perso Principal FInal 1"))
-							go.SendMessage("degats", 40, SendMessageOptions.DontRequireReceiver);
+							go.SendMessage("degats", 25, SendMessageOptions.DontRequireReceiver);
 					}
 				}	
 			}
 			b = false;
 			Wait(0.3f);
-			Network.Destroy (gameObject);
+			Network.Destroy (RB.gameObject);
 		}
 		
 	}
