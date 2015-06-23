@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\PersoPrincipal.cs" />
      <Compile Include="Assets\Scripts\Spawn.cs" />
      <Compile Include="Assets\Scripts\SquadSpawn.cs" />
+     <Compile Include="Assets\Scripts\Teleport_Same_Scene.cs" />
      <Compile Include="Assets\Scripts\XpBar.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
