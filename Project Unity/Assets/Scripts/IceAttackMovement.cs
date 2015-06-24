@@ -10,17 +10,22 @@ public class IceAttackMovement : MonoBehaviour
 	GameObject[] ennemies;
 	bool b;
 	// Use this for initialization
+
 	void Start ()
 	{
 		//sc = GetComponent<SphereCollider> ();
-		RB.AddRelativeForce (Vector3.forward * -Force);
-		ennemies = GameObject.FindGameObjectsWithTag ("Character");
+
+
 		b = true;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		
+		RB.AddRelativeForce (Vector3.forward * -Force);
+		ennemies = GameObject.FindGameObjectsWithTag ("Character");
+		
 		
 	}
 	
@@ -47,7 +52,7 @@ public class IceAttackMovement : MonoBehaviour
 							objet.SendMessage ("degats", 15, SendMessageOptions.DontRequireReceiver);
 						} else {
 							Collider objet = go.GetComponent<Collider> ();
-							objet.SendMessage ("degats", 10, SendMessageOptions.DontRequireReceiver);
+							objet.SendMessage ("degats", 5, SendMessageOptions.DontRequireReceiver);
 						}
 						
 						

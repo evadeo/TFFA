@@ -16,13 +16,14 @@ public class Fireballmovement : MonoBehaviour
 				//sc = GetComponent<SphereCollider> ();
 				RB.AddRelativeForce (Vector3.forward * -Force);
 				ennemies = GameObject.FindGameObjectsWithTag ("Character");
-				b = true;
+				b = true;	
+				
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-				
+			
 		}
 
 		void OnTriggerEnter (Collider collider)
