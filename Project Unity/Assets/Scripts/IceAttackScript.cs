@@ -29,7 +29,7 @@ public class IceAttackScript : MonoBehaviour {
 				//	Rigidbody smoke;
 				//	smoke = Instantiate(fumee,fireballbullet.transform.position,Quaternion.Euler(0,0,0)) as Rigidbody ;
 				//}
-				PersoPrincipal.Mana -= 10;
+				PersoPrincipal.Mana -= 3;
 			}
 		}
 		

@@ -11,7 +11,9 @@ public class Maitre_mage : MonoBehaviour {
     private Rect position_window;
     //private SphereCollider sph_coll;
 	private bool instr;
-    public string[] textLines;
+	public string[] textLinesFr;
+	public string[] textLinesAng;
+    string[] textLines;
 	public string instructionText;
     public Text talktextGui;
 	public Text instructions;
@@ -42,6 +44,13 @@ public class Maitre_mage : MonoBehaviour {
 	void Start () {
         //sph_coll = this.GetComponent<SphereCollider>();
 		instr = true;
+		if (Option.langue == "Francais") {
+			textLines = textLinesFr;		
+		} else {
+			textLines = textLinesAng;
+		}
+		
+
 	}
 	
 	// Update is called once per frame
