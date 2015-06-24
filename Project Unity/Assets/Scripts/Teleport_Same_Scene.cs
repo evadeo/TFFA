@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Teleport_Same_Scene : MonoBehaviour {
     public Transform cible;
+    public KeyCode key;
+
     private bool devant;
     private Collider perso;
 
@@ -16,6 +18,7 @@ public class Teleport_Same_Scene : MonoBehaviour {
         else
         {
             devant = false;
+            perso = null;
         }
     }
 
@@ -31,7 +34,7 @@ public class Teleport_Same_Scene : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(key))
         {
             Debug.Log("bonjour");
             perso.transform.position = cible.position;
