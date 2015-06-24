@@ -16,6 +16,7 @@ public class Maitre_mage : MonoBehaviour {
     public Text talktextGui;
 	public Text instructions;
     public KeyCode parler;
+	public AudioClip son;
 
 
     //Check if the player is in the "zone" to talk with the maitre
@@ -58,8 +59,12 @@ public class Maitre_mage : MonoBehaviour {
 				instr = false;
                 if (currentLine < textLines.Length)
                 {
+					if (currentLine == 0){
+						AudioSource.PlayClipAtPoint(son, GameObject.Find ("Perso(Clone)").transform.position);
+					}
                     talktextGui.text = textLines[currentLine];
                     currentLine++;
+
                 }
                 else
                 {
