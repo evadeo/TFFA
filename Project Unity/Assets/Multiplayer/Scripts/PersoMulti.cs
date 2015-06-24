@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class PersoMulti : MonoBehaviour {
-	public static int health;
-	public static int Health {
+	public int health;
+	public int Health {
 		get { return health; }
 		set {
 			if (value <= 0)
@@ -27,8 +27,8 @@ public class PersoMulti : MonoBehaviour {
 				max_health = value;
 		}
 	}
-	public static int mana;
-	public static int Mana {
+	public int mana;
+	public int Mana {
 		get { return mana; }
 		set {
 			if (value < 0)
@@ -53,8 +53,10 @@ public class PersoMulti : MonoBehaviour {
 	public GameObject player;
 	public GameObject parent;
 	public Transform explosion;
-	private static int compteur;
-	
+	public Transform fireballbullet;
+	public Transform spawn;
+	private int compteur;
+	private int last = 0;
 	void Start() {
 		if (PlayerPrefs.HasKey ("Load"))
 				PlayerPrefs.SetInt ("Load", 0);
@@ -64,13 +66,17 @@ public class PersoMulti : MonoBehaviour {
 			Max_Health = 100;
 			Health = Max_Health;
 			Max_Mana = 100;
+			if (!NetworkManager.coop)
+				Max_Mana = int.MaxValue;
 			Mana = Max_Mana;
 			compteur = 0;
+
 		}
 	}
 
 	void Update(){
 		if (GetComponentInParent<NetworkView>().isMine){
+			Mana = 100;
 			Cursor.visible = false;
 			if (Input.GetKey (KeyCode.Tab))
 			{
@@ -79,10 +85,8 @@ public class PersoMulti : MonoBehaviour {
 			}
 			else
 				Debug.developerConsoleVisible = false;
-			if (Input.GetKey (KeyCode.P)) 
-				Health --;
-			if (Input.GetKey (KeyCode.O)) 
-				Mana --;
+			if (Input.GetKey(KeyCode.A))
+				Fireball();
 			if (Input.GetKey (KeyCode.Escape)) {
 				Cursor.visible = true;
 				if (Network.isServer)
@@ -110,9 +114,25 @@ public class PersoMulti : MonoBehaviour {
 		}
 	}
 
-	void degats(int dmg){
-		Debug.Log ("Recu");
-		Health -= dmg;
-
+	void Fireball(){
+		if (Mana >= 10 && compteur >= (last+120)) {
+			float my_y = transform.rotation.eulerAngles.y + 180;
+			Fireballmouvementmulti f = new Fireballmouvementmulti();
+			f.Fbmm (player.transform, 40, spawn, fireballbullet, my_y);
+			Mana -= 10;
+			last = compteur;
 		}
+	}
+	private IEnumerator CD(){
+		yield return new WaitForSeconds (2f);
+		}
+	void degats(int dmg){
+
+		Health -= dmg;
+		Debug.Log ("Recu" + Health);
+		}
+	void Sort(int nb){
+		Mana -= nb;
+		}
+
 }

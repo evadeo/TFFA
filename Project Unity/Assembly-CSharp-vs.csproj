@@ -53,12 +53,14 @@
      <Compile Include="Assets\Menu\Option.cs" />
      <Compile Include="Assets\Modelisation\Personnage\Perso principal\DeplacementsPP.cs" />
      <Compile Include="Assets\Mouvement_Enemy.cs" />
+     <Compile Include="Assets\Multiplayer\Scripts\AIMulti.cs" />
      <Compile Include="Assets\Multiplayer\Scripts\CameraMulti.cs" />
      <Compile Include="Assets\Multiplayer\Scripts\DeplacementsMulti.cs" />
      <Compile Include="Assets\Multiplayer\Scripts\FireballMulti.cs" />
      <Compile Include="Assets\Multiplayer\Scripts\Fireballmouvementmulti.cs" />
      <Compile Include="Assets\Multiplayer\Scripts\NetworkManager.cs" />
      <Compile Include="Assets\Multiplayer\Scripts\PersoMulti.cs" />
+     <Compile Include="Assets\Multiplayer\Scripts\SquadMulti.cs" />
      <Compile Include="Assets\Scripts\AI.cs" />
      <Compile Include="Assets\Scripts\AllerDansScene.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />

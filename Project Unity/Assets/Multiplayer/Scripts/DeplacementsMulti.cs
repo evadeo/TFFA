@@ -23,11 +23,11 @@ public class DeplacementsMulti : MonoBehaviour {
 	private float x = (float)0.0;
 	private float y = (float)0.0;
 	private Vector3 angle;
-	public float lastSynchronizationTime = 0f;
-	public float syncDelay = 0f;
-	public float syncTime = 0f;
-	public Vector3 syncStartPosition = Vector3.zero;
-	public Vector3 syncEndPosition = Vector3.zero;
+	private float lastSynchronizationTime = 0f;
+	private float syncDelay = 0f;
+	private float syncTime = 0f;
+	private Vector3 syncStartPosition = Vector3.zero;
+	private Vector3 syncEndPosition = Vector3.zero;
 	
 	
 	// Use this for initialization
@@ -44,22 +44,29 @@ public class DeplacementsMulti : MonoBehaviour {
 	}
 	
 	
-	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+	void OnSerializeNetworkView (BitStream stream, NetworkMessageInfo info)
 	{
 		Vector3 syncPosition = Vector3.zero;
+		Vector3 syncVelocity = Vector3.zero;
 		if (stream.isWriting)
 		{
-			syncPosition = player.GetComponent<Rigidbody>().position;
+			syncPosition = transform.position;
 			stream.Serialize(ref syncPosition);
+			
+			syncVelocity = transform.GetComponent<Rigidbody>().velocity;
+			stream.Serialize(ref syncVelocity);
 		}
 		else
 		{
 			stream.Serialize(ref syncPosition);
+			stream.Serialize(ref syncVelocity);
+			
 			syncTime = 0f;
 			syncDelay = Time.time - lastSynchronizationTime;
 			lastSynchronizationTime = Time.time;
-			player.GetComponent<Rigidbody>().position = syncStartPosition;
-			syncEndPosition = syncPosition;
+			
+			syncEndPosition = syncPosition + syncVelocity * syncDelay;
+			syncStartPosition = transform.position;
 		}
 	}
 	private void SyncedMovement(){

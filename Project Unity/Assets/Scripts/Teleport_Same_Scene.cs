@@ -6,6 +6,7 @@ public class Teleport_Same_Scene : MonoBehaviour {
     public KeyCode key;
 
     private bool devant;
+
     private Collider perso;
 
     void OnTriggerEnter(Collider col)

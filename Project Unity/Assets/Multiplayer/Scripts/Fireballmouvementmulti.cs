@@ -1,38 +1,74 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Fireballmouvementmulti : MonoBehaviour {
+public class Fireballmouvementmulti : ScriptableObject {
 
 	public Rigidbody RB;
-	public Rigidbody fumee;
 	//SphereCollider sc;
 	public float Force;
 	public float rayon = 3f;
 	GameObject[] ennemies;
 	bool b;
+	int compteur = 0;
+	private float lastSynchronizationTime = 0f;
+	private float syncDelay = 0f;
+	private float syncTime = 0f;
+	private Vector3 syncStartPosition = Vector3.zero;
+	private Vector3 syncEndPosition = Vector3.zero;
 	// Use this for initialization
 	void Start ()
 	{
+
 		//sc = GetComponent<SphereCollider> ();
 		RB.AddRelativeForce (Vector3.forward * -Force);
 		ennemies = GameObject.FindGameObjectsWithTag ("Character");
-		b = true;
+		b = false;
 	}
-	
+	public Fireballmouvementmulti(){
+		}
+	public void Fbmm(Transform origin, int dmg, Transform spawn, Transform fireballbullet, float my_y)
+	{
+		Debug.Log ("ok");
+		Network.Instantiate (fireballbullet, spawn.position, Quaternion.Euler (0, my_y, 0),0);
+	}
 	// Update is called once per frame
 	void Update ()
 	{
 		ennemies = GameObject.FindGameObjectsWithTag ("Character");
+		compteur++;
+		if (!b)
+			b = compteur == 3;
 	}
-	
+
+
+	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+	{
+		Vector3 syncPosition = Vector3.zero;
+		if (stream.isWriting)
+		{
+			syncPosition = RB.GetComponent<Rigidbody>().position;
+			stream.Serialize(ref syncPosition);
+		}
+		else
+		{
+			stream.Serialize(ref syncPosition);
+			syncTime = 0f;
+			syncDelay = Time.time - lastSynchronizationTime;
+			lastSynchronizationTime = Time.time;
+			RB.GetComponent<Rigidbody>().position = syncStartPosition;
+			syncEndPosition = syncPosition;
+		}
+	}
+	private void SyncedMovement(){
+		syncTime += Time.deltaTime;
+		RB.GetComponent<Rigidbody> ().position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
+	}
+
+
+
 	void OnTriggerEnter (Collider collider)
 	{
 		if (b) {
-			Debug.Log ("tag: " + collider.tag);
-			if (collider.tag == "Character") {
-			}
-			RB.AddRelativeForce (Vector3.forward * Force * 0.2f);
-			UnityEngine.GameObject smoke = Network.Instantiate (fumee, collider.transform.position + Vector3.up, Quaternion.identity,0) as GameObject;
 			foreach (GameObject go in ennemies) {
 				if (go != null) {
 					float my_x = go.transform.position.x - RB.transform.position.x;
@@ -40,18 +76,15 @@ public class Fireballmouvementmulti : MonoBehaviour {
 					float my_z = go.transform.position.z - RB.transform.position.z;
 					if ( Mathf.Abs(my_x) <= rayon && Mathf.Abs(my_y) <= rayon && Mathf.Abs(my_z) <= rayon)
 					{
-						Debug.Log ("tag rayon: " + go.tag + " " + (go.name == "Perso(Clone)") + go.name);
-						Debug.Log ("oui");
-						GameObject objet = GameObject.FindGameObjectWithTag("Joueur");
-						objet.SendMessage("degats", 15, SendMessageOptions.DontRequireReceiver);
+						Debug.Log ("tag rayon: " + go.tag + " "  + go.name);
+						if (!(NetworkManager.coop  && go.name == "Perso Principal FInal 1"))
+							go.SendMessage("degats", 40, SendMessageOptions.DontRequireReceiver);
 					}
-				}
+				}	
 			}
 			b = false;
 			Wait(0.3f);
-			Network.Destroy (gameObject);
-			Wait(4f);
-			Network.Destroy(smoke);
+			Network.Destroy (RB.gameObject);
 		}
 		
 	}
