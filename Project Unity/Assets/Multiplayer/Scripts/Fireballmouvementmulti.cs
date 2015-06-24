@@ -78,7 +78,7 @@ public class Fireballmouvementmulti : ScriptableObject {
 					{
 						Debug.Log ("tag rayon: " + go.tag + " "  + go.name);
 						if (!(NetworkManager.coop  && go.name == "Perso Principal FInal 1"))
-							go.SendMessage("degats", 30, SendMessageOptions.DontRequireReceiver);
+							go.SendMessage("degats", 40, SendMessageOptions.DontRequireReceiver);
 					}
 				}	
 			}

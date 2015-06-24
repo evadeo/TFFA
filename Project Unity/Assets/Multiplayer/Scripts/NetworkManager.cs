@@ -17,7 +17,6 @@ public class NetworkManager : MonoBehaviour
 		public GameObject spawnEnnemies;
 		public GameObject spawn1;
 		public GameObject spawn2;
-		public static int nbspawn = 1;
 
 		private void StartServer ()
 		{
@@ -124,7 +123,7 @@ public class NetworkManager : MonoBehaviour
 				if (coop)
 						spawnpoint = spawnCoop;
 				else {
-						if (nbspawn == 1)
+						if (Network.isServer)
 								spawnpoint = spawn1;
 						else 
 								spawnpoint = spawn2;
@@ -133,6 +132,5 @@ public class NetworkManager : MonoBehaviour
 				y = spawnpoint.transform.position.y + 0.2f;
 				z = spawnpoint.transform.position.z + Time.fixedTime % 12; // histoire de pas spawn tout le temps au meme point
 				Network.Instantiate (player, new Vector3 (x, y, z), Quaternion.identity, 2);
-				nbspawn++;
 		}
 }

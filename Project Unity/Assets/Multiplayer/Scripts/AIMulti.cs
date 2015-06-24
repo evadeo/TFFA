@@ -47,9 +47,7 @@ public class AIMulti : MonoBehaviour
 		private Vector3 syncStartPosition = Vector3.zero;
 		private Vector3 syncEndPosition = Vector3.zero;
 		private GameObject ennemy;
-		private  float delayRotation;
 		private  float changeRotation;
-		private  float newRotation;
 		private float max = float.MaxValue;
 	
 		// Use this for initialization
@@ -60,8 +58,6 @@ public class AIMulti : MonoBehaviour
 				Health = Max_Health;
 				dead = false;
 				compteur = 20;
-				delayRotation = Random.Range (1, 6);
-				newRotation = Random.Range (0, 361);
 		}
 	
 		// Update is called once per frame
@@ -70,12 +66,10 @@ public class AIMulti : MonoBehaviour
 				players = GameObject.FindGameObjectsWithTag ("Joueur");
 				foreach (GameObject g in players) {
 						float p1 = Vector3.Distance (player.transform.position, g.transform.position);
-						Debug.Log(p1);
 						if (p1 < max) {
 								dirToMain = g.transform.position - transform.position;
 								ennemy = g;
 								max = p1;
-				Debug.Log("Hello" + dirToMain);
 						} 
 				}
 				
@@ -85,7 +79,7 @@ public class AIMulti : MonoBehaviour
 						Instantiate (explosion, player.transform.position, player.transform.rotation);
 						Health = 0;
 						transform.GetComponent<Animation> ().CrossFade ("die", 0.5f * Time.deltaTime);
-						Destroy (player, 1f);
+						Network.Destroy (player);
 						dead = true;
 				}
 		}
@@ -105,27 +99,9 @@ public class AIMulti : MonoBehaviour
 										ennemy.SendMessageUpwards ("degats", 25);
 								}
 						} else {
-								if (Time.fixedTime % delayRotation == 0) {
-										newRotation = Random.Range (0, 361);
-								}
-								if (dirToMain.magnitude < 10) {
 										moveDirection = dirToMain * 0.5f;
 										transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (dirToMain), 10f * Time.deltaTime);
-								} else {
-										moveDirection = Vector3.forward * speed;
-										moveDirection = transform.TransformDirection (moveDirection);
-										try {
-												if (Physics.Raycast (transform.Find ("origin").position, transform.forward, out hit)) {
-														if (hit.distance < 7) {
-																transform.rotation = Quaternion.Slerp (transform.rotation, transform.rotation * Quaternion.Euler (0, 180, 0), 0.5f * Time.deltaTime);
-														} else {
-																transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler (0, newRotation, 0), 0.5f * Time.deltaTime);
-														}
-												}
-										} catch {
-												transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler (0, newRotation, 0), 0.5f * Time.deltaTime);
-										}
-								}
+								
 								transform.GetComponent<Animation> ().CrossFade ("run", 0.5f * Time.deltaTime);
 								moveDirection.y -= 4;
 								controller.Move (moveDirection * Time.deltaTime);

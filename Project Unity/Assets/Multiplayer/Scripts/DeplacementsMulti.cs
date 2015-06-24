@@ -44,22 +44,29 @@ public class DeplacementsMulti : MonoBehaviour {
 	}
 	
 	
-	void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+	void OnSerializeNetworkView (BitStream stream, NetworkMessageInfo info)
 	{
 		Vector3 syncPosition = Vector3.zero;
+		Vector3 syncVelocity = Vector3.zero;
 		if (stream.isWriting)
 		{
-			syncPosition = player.GetComponent<Rigidbody>().position;
+			syncPosition = transform.position;
 			stream.Serialize(ref syncPosition);
+			
+			syncVelocity = transform.GetComponent<Rigidbody>().velocity;
+			stream.Serialize(ref syncVelocity);
 		}
 		else
 		{
 			stream.Serialize(ref syncPosition);
+			stream.Serialize(ref syncVelocity);
+			
 			syncTime = 0f;
 			syncDelay = Time.time - lastSynchronizationTime;
 			lastSynchronizationTime = Time.time;
-			player.GetComponent<Rigidbody>().position = syncStartPosition;
-			syncEndPosition = syncPosition;
+			
+			syncEndPosition = syncPosition + syncVelocity * syncDelay;
+			syncStartPosition = transform.position;
 		}
 	}
 	private void SyncedMovement(){
