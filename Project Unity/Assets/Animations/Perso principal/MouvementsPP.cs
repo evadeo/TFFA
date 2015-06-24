@@ -75,7 +75,7 @@ public class MouvementsPP : MonoBehaviour {
 				if (Input.GetButton ("Jump")) { //Si le perso saute. On le met avant le courrir car si on saute, on ne peut ni marcher, ni courrir.
 					characterContent.GetComponent<Animation> ().CrossFade ("Animation - Saut", 0.2f);
 					WaitForAnimation ();
-                    source.PlayOneShot(saut,0.1f);
+                    source.PlayOneShot(saut);
 					moveDirection.y += speedJump;
 				} 
 				else if (Input.GetButton ("Horizontal") || Input.GetButton ("Vertical")) {
@@ -92,7 +92,8 @@ public class MouvementsPP : MonoBehaviour {
 				if (!Input.anyKey)
                 {
                     characterContent.GetComponent<Animation>().CrossFade("Anim - Idle", 0.2f);
-                    //source.Stop();
+                    source.Stop();
+                    this.GetComponent<AudioSource>().Stop();
                 }
 			}
 			//Gravity et on bouge le character controller
@@ -109,47 +110,3 @@ public class MouvementsPP : MonoBehaviour {
 
 
 }
-
-
-
-
-
-
-
-/* moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-moveDirection = transform.TransformDirection(moveDirection);
-//Multiply it by speed.
-moveDirection *= speed;
-//Jumping
-if (Input.GetButton("Jump"))
-moveDirection.y = jumpSpeed;
-}
-//Applying gravity to the controller
-moveDirection.y -= gravity * Time.deltaTime;
-//Making the character move
-controller.Move(moveDirection * Time.deltaTime);*/
-
-
-
-
-
-/*                    if(!source.isPlaying)
-                    {
-                        source.PlayOneShot(courrir, 0.1f);
-                        Debug.Log("yolo");
-                    }
-                        source.PlayOneShot(courrir, 0.1f);
-                    //source.PlayOneShot(courrir,0.1f);
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- *                     if(!this.GetComponent<AudioSource>().isPlaying)
-                    {
-                        this.GetComponent<AudioSource>().PlayOneShot(courrir, 0.1f);
-                    }
-
-*/
