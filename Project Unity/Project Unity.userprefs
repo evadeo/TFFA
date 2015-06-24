@@ -1,16 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Multiplayer\Scripts\AIMulti.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Multiplayer\Scripts\PersoMulti.cs">
     <Files>
       <File FileName="Assets\Scripts\AI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Multiplayer\Scripts\Fireballmouvementmulti.cs" Line="1" Column="1" />
-      <File FileName="Assets\Multiplayer\Scripts\NetworkManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Multiplayer\Scripts\FireballMulti.cs" Line="1" Column="1" />
-      <File FileName="Assets\Multiplayer\Scripts\DeplacementsMulti.cs" Line="1" Column="1" />
-      <File FileName="Assets\Animations\Perso principal\MouvementsPP.cs" Line="1" Column="1" />
-      <File FileName="Assets\Multiplayer\Scripts\PersoMulti.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Multiplayer\Scripts\AIMulti.cs" Line="1" Column="1" />
+      <File FileName="Assets\Multiplayer\Scripts\Fireballmouvementmulti.cs" Line="24" Column="40" />
+      <File FileName="Assets\Multiplayer\Scripts\NetworkManager.cs" Line="128" Column="10" />
+      <File FileName="Assets\Multiplayer\Scripts\PersoMulti.cs" Line="79" Column="15" />
+      <File FileName="Assets\Multiplayer\Scripts\AIMulti.cs" Line="75" Column="62" />
+      <File FileName="Assets\Multiplayer\Scripts\SquadMulti.cs" Line="23" Column="84" />
+      <File FileName="Assets\Multiplayer\Scripts\CameraMulti.cs" Line="42" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

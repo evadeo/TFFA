@@ -28,8 +28,22 @@ public class CameraMulti : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GetComponent<NetworkView> ().isMine)
-			movement ();
+		if (GetComponent<NetworkView> ().isMine) {
+						movement ();
+			if (Input.GetKey (KeyCode.Escape)) {
+				Cursor.visible = true;
+				if (Network.isServer)
+				{
+					NetworkPlayer[] test= Network.connections;
+					foreach (NetworkPlayer np in test) {
+						Network.CloseConnection(np,true);
+					}
+				}
+				Network.Destroy(Cible);
+				Network.Disconnect();
+				Application.LoadLevel(0);
+			}
+				}
 	}
 	void movement(){
 		if (target) {

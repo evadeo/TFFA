@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 public class AIMulti : MonoBehaviour
 {
 	
@@ -47,7 +46,12 @@ public class AIMulti : MonoBehaviour
 		private float syncTime = 0f;
 		private Vector3 syncStartPosition = Vector3.zero;
 		private Vector3 syncEndPosition = Vector3.zero;
-	private GameObject ennemy;
+		private GameObject ennemy;
+		private  float delayRotation;
+		private  float changeRotation;
+		private  float newRotation;
+		private float max = float.MaxValue;
+	
 		// Use this for initialization
 		void Start ()
 		{
@@ -56,28 +60,23 @@ public class AIMulti : MonoBehaviour
 				Health = Max_Health;
 				dead = false;
 				compteur = 20;
+				delayRotation = Random.Range (1, 6);
+				newRotation = Random.Range (0, 361);
 		}
 	
 		// Update is called once per frame
 		void Update ()
 		{
-				try {
-						players = GameObject.FindGameObjectsWithTag ("GameController");
-						float p1 = Vector3.Distance (player.transform.position, players [0].transform.position);
-						float p2 = Vector3.Distance (player.transform.position, players [1].transform.position);
-						if (Mathf.Min (p1, p2) == p1)
-			{
-								dirToMain = players [0].transform.position;
-				ennemy = players[0];
-			}
-						else 
-			{
-								dirToMain = players [1].transform.position;
-				ennemy = players[1];
-			}
-				} catch {
-			dirToMain = Vector3.forward;
-			ennemy = player;
+				players = GameObject.FindGameObjectsWithTag ("Joueur");
+				foreach (GameObject g in players) {
+						float p1 = Vector3.Distance (player.transform.position, g.transform.position);
+						Debug.Log(p1);
+						if (p1 < max) {
+								dirToMain = g.transform.position - transform.position;
+								ennemy = g;
+								max = p1;
+				Debug.Log("Hello" + dirToMain);
+						} 
 				}
 				
 		
@@ -87,7 +86,6 @@ public class AIMulti : MonoBehaviour
 						Health = 0;
 						transform.GetComponent<Animation> ().CrossFade ("die", 0.5f * Time.deltaTime);
 						Destroy (player, 1f);
-						PersoPrincipal.Current_Xp += 50;
 						dead = true;
 				}
 		}
@@ -104,18 +102,34 @@ public class AIMulti : MonoBehaviour
 								compteur++;
 								if (compteur % 60 == 0) { // à 60 fps on à ici une minute
 										compteur = 0;
-										ennemy.SendMessage("degats", 25);
+										ennemy.SendMessageUpwards ("degats", 25);
 								}
 						} else {
-								
-								moveDirection = dirToMain * 0.5f;
-				transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (dirToMain), 10f * Time.deltaTime);
-								
-
+								if (Time.fixedTime % delayRotation == 0) {
+										newRotation = Random.Range (0, 361);
+								}
+								if (dirToMain.magnitude < 10) {
+										moveDirection = dirToMain * 0.5f;
+										transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.LookRotation (dirToMain), 10f * Time.deltaTime);
+								} else {
+										moveDirection = Vector3.forward * speed;
+										moveDirection = transform.TransformDirection (moveDirection);
+										try {
+												if (Physics.Raycast (transform.Find ("origin").position, transform.forward, out hit)) {
+														if (hit.distance < 7) {
+																transform.rotation = Quaternion.Slerp (transform.rotation, transform.rotation * Quaternion.Euler (0, 180, 0), 0.5f * Time.deltaTime);
+														} else {
+																transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler (0, newRotation, 0), 0.5f * Time.deltaTime);
+														}
+												}
+										} catch {
+												transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler (0, newRotation, 0), 0.5f * Time.deltaTime);
+										}
+								}
+								transform.GetComponent<Animation> ().CrossFade ("run", 0.5f * Time.deltaTime);
+								moveDirection.y -= 4;
+								controller.Move (moveDirection * Time.deltaTime);
 						}
-						transform.GetComponent<Animation> ().CrossFade ("run", 0.5f * Time.deltaTime);
-						moveDirection.y -= 4;
-						controller.Move (moveDirection * Time.deltaTime);
 				}
 		}
 

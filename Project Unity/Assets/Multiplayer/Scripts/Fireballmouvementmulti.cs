@@ -28,6 +28,7 @@ public class Fireballmouvementmulti : ScriptableObject {
 		}
 	public void Fbmm(Transform origin, int dmg, Transform spawn, Transform fireballbullet, float my_y)
 	{
+		Debug.Log ("ok");
 		Network.Instantiate (fireballbullet, spawn.position, Quaternion.Euler (0, my_y, 0),0);
 	}
 	// Update is called once per frame
@@ -36,7 +37,7 @@ public class Fireballmouvementmulti : ScriptableObject {
 		ennemies = GameObject.FindGameObjectsWithTag ("Character");
 		compteur++;
 		if (!b)
-			b = compteur == 1;
+			b = compteur == 3;
 	}
 
 
@@ -77,7 +78,7 @@ public class Fireballmouvementmulti : ScriptableObject {
 					{
 						Debug.Log ("tag rayon: " + go.tag + " "  + go.name);
 						if (!(NetworkManager.coop  && go.name == "Perso Principal FInal 1"))
-							go.SendMessage("degats", 25, SendMessageOptions.DontRequireReceiver);
+							go.SendMessage("degats", 30, SendMessageOptions.DontRequireReceiver);
 					}
 				}	
 			}
