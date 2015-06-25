@@ -4,7 +4,283 @@ timeCreated: 1435148016
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: arme
+    100002: Articulation
+    100004: Articulation_2
+    100006: bouche
+    100008: bouche_2
+    100010: bras_d
+    100012: bras_d_2
+    100014: bras_d_3
+    100016: bras_d_3_MeshPart0
+    100018: bras_d_3_MeshPart1
+    100020: bras_d_3_MeshPart2
+    100022: bras_d_MeshPart0
+    100024: bras_d_MeshPart1
+    100026: bras_d_MeshPart2
+    100028: bras_g
+    100030: Cube
+    100032: Cube_1
+    100034: Cylindre
+    100036: Cylindre_1
+    100038: dent_d
+    100040: dent_g
+    100042: //RootNode
+    100044: jambe_d
+    100046: jambe_g
+    100048: oeil_d
+    100050: oeil_d_2
+    100052: oeil_g
+    100054: oeil_g_2
+    100056: pied_d
+    100058: pied_g
+    100060: pupille_d
+    100062: pupille_g
+    100064: sourcil_d
+    100066: sourcil_g
+    100068: "Sph\xE8re"
+    100070: "Sph\xE8re_1"
+    100072: "Sph\xE8re_10"
+    100074: "Sph\xE8re_11"
+    100076: "Sph\xE8re_12"
+    100078: "Sph\xE8re_13"
+    100080: "Sph\xE8re_14"
+    100082: "Sph\xE8re_15"
+    100084: "Sph\xE8re_16"
+    100086: "Sph\xE8re_17"
+    100088: "Sph\xE8re_18"
+    100090: "Sph\xE8re_19"
+    100092: "Sph\xE8re_1_10"
+    100094: "Sph\xE8re_1_11"
+    100096: "Sph\xE8re_1_12"
+    100098: "Sph\xE8re_1_2"
+    100100: "Sph\xE8re_1_3"
+    100102: "Sph\xE8re_1_4"
+    100104: "Sph\xE8re_1_5"
+    100106: "Sph\xE8re_1_6"
+    100108: "Sph\xE8re_1_7"
+    100110: "Sph\xE8re_1_8"
+    100112: "Sph\xE8re_1_9"
+    100114: "Sph\xE8re_2"
+    100116: "Sph\xE8re_2_2"
+    100118: "Sph\xE8re_2_3"
+    100120: "Sph\xE8re_2_4"
+    100122: "Sph\xE8re_2_5"
+    100124: "Sph\xE8re_3"
+    100126: "Sph\xE8re_3_2"
+    100128: "Sph\xE8re_3_3"
+    100130: "Sph\xE8re_3_4"
+    100132: "Sph\xE8re_4"
+    100134: "Sph\xE8re_4_2"
+    100136: "Sph\xE8re_4_3"
+    100138: "Sph\xE8re_4_4"
+    100140: "Sph\xE8re_5"
+    100142: "Sph\xE8re_5_2"
+    100144: "Sph\xE8re_5_3"
+    100146: "Sph\xE8re_5_4"
+    100148: "Sph\xE8re_6"
+    100150: "Sph\xE8re_6_2"
+    100152: "Sph\xE8re_6_3"
+    100154: "Sph\xE8re_6_4"
+    100156: "Sph\xE8re_7"
+    100158: "Sph\xE8re_7_2"
+    100160: "Sph\xE8re_7_3"
+    100162: "Sph\xE8re_7_4"
+    100164: "Sph\xE8re_7_5"
+    100166: "Sph\xE8re_7_6"
+    100168: "Sph\xE8re_8"
+    100170: "Sph\xE8re_9"
+    100172: tibia_
+    100174: tibia__2
+    100176: torse
+    100178: torse_MeshPart0
+    100180: torse_MeshPart1
+    100182: torse_MeshPart2
+    100184: "t\xEAte"
+    100186: "t\xEAte_2"
+    400000: arme
+    400002: Articulation
+    400004: Articulation_2
+    400006: bouche
+    400008: bouche_2
+    400010: bras_d
+    400012: bras_d_2
+    400014: bras_d_3
+    400016: bras_d_3_MeshPart0
+    400018: bras_d_3_MeshPart1
+    400020: bras_d_3_MeshPart2
+    400022: bras_d_MeshPart0
+    400024: bras_d_MeshPart1
+    400026: bras_d_MeshPart2
+    400028: bras_g
+    400030: Cube
+    400032: Cube_1
+    400034: Cylindre
+    400036: Cylindre_1
+    400038: dent_d
+    400040: dent_g
+    400042: //RootNode
+    400044: jambe_d
+    400046: jambe_g
+    400048: oeil_d
+    400050: oeil_d_2
+    400052: oeil_g
+    400054: oeil_g_2
+    400056: pied_d
+    400058: pied_g
+    400060: pupille_d
+    400062: pupille_g
+    400064: sourcil_d
+    400066: sourcil_g
+    400068: "Sph\xE8re"
+    400070: "Sph\xE8re_1"
+    400072: "Sph\xE8re_10"
+    400074: "Sph\xE8re_11"
+    400076: "Sph\xE8re_12"
+    400078: "Sph\xE8re_13"
+    400080: "Sph\xE8re_14"
+    400082: "Sph\xE8re_15"
+    400084: "Sph\xE8re_16"
+    400086: "Sph\xE8re_17"
+    400088: "Sph\xE8re_18"
+    400090: "Sph\xE8re_19"
+    400092: "Sph\xE8re_1_10"
+    400094: "Sph\xE8re_1_11"
+    400096: "Sph\xE8re_1_12"
+    400098: "Sph\xE8re_1_2"
+    400100: "Sph\xE8re_1_3"
+    400102: "Sph\xE8re_1_4"
+    400104: "Sph\xE8re_1_5"
+    400106: "Sph\xE8re_1_6"
+    400108: "Sph\xE8re_1_7"
+    400110: "Sph\xE8re_1_8"
+    400112: "Sph\xE8re_1_9"
+    400114: "Sph\xE8re_2"
+    400116: "Sph\xE8re_2_2"
+    400118: "Sph\xE8re_2_3"
+    400120: "Sph\xE8re_2_4"
+    400122: "Sph\xE8re_2_5"
+    400124: "Sph\xE8re_3"
+    400126: "Sph\xE8re_3_2"
+    400128: "Sph\xE8re_3_3"
+    400130: "Sph\xE8re_3_4"
+    400132: "Sph\xE8re_4"
+    400134: "Sph\xE8re_4_2"
+    400136: "Sph\xE8re_4_3"
+    400138: "Sph\xE8re_4_4"
+    400140: "Sph\xE8re_5"
+    400142: "Sph\xE8re_5_2"
+    400144: "Sph\xE8re_5_3"
+    400146: "Sph\xE8re_5_4"
+    400148: "Sph\xE8re_6"
+    400150: "Sph\xE8re_6_2"
+    400152: "Sph\xE8re_6_3"
+    400154: "Sph\xE8re_6_4"
+    400156: "Sph\xE8re_7"
+    400158: "Sph\xE8re_7_2"
+    400160: "Sph\xE8re_7_3"
+    400162: "Sph\xE8re_7_4"
+    400164: "Sph\xE8re_7_5"
+    400166: "Sph\xE8re_7_6"
+    400168: "Sph\xE8re_8"
+    400170: "Sph\xE8re_9"
+    400172: tibia_
+    400174: tibia__2
+    400176: torse
+    400178: torse_MeshPart0
+    400180: torse_MeshPart1
+    400182: torse_MeshPart2
+    400184: "t\xEAte"
+    400186: "t\xEAte_2"
+    2300000: bouche_2
+    2300002: bras_d_3_MeshPart0
+    2300004: bras_d_3_MeshPart1
+    2300006: bras_d_3_MeshPart2
+    2300008: bras_d_MeshPart0
+    2300010: bras_d_MeshPart1
+    2300012: bras_d_MeshPart2
+    2300014: Cube
+    2300016: Cube_1
+    2300018: Cylindre
+    2300020: Cylindre_1
+    2300022: dent_d
+    2300024: dent_g
+    2300026: oeil_d_2
+    2300028: oeil_g_2
+    2300030: pied_d
+    2300032: pied_g
+    2300034: pupille_d
+    2300036: pupille_g
+    2300038: sourcil_d
+    2300040: sourcil_g
+    2300042: "Sph\xE8re_11"
+    2300044: tibia_
+    2300046: tibia__2
+    2300048: torse_MeshPart0
+    2300050: torse_MeshPart1
+    2300052: torse_MeshPart2
+    2300054: "t\xEAte_2"
+    3300000: bouche_2
+    3300002: bras_d_3_MeshPart0
+    3300004: bras_d_3_MeshPart1
+    3300006: bras_d_3_MeshPart2
+    3300008: bras_d_MeshPart0
+    3300010: bras_d_MeshPart1
+    3300012: bras_d_MeshPart2
+    3300014: Cube
+    3300016: Cube_1
+    3300018: Cylindre
+    3300020: Cylindre_1
+    3300022: dent_d
+    3300024: dent_g
+    3300026: oeil_d_2
+    3300028: oeil_g_2
+    3300030: pied_d
+    3300032: pied_g
+    3300034: pupille_d
+    3300036: pupille_g
+    3300038: sourcil_d
+    3300040: sourcil_g
+    3300042: "Sph\xE8re_11"
+    3300044: tibia_
+    3300046: tibia__2
+    3300048: torse_MeshPart0
+    3300050: torse_MeshPart1
+    3300052: torse_MeshPart2
+    3300054: "t\xEAte_2"
+    4300000: dent_d
+    4300002: bouche_2
+    4300004: dent_g
+    4300006: sourcil_g
+    4300008: pupille_g
+    4300010: oeil_g_2
+    4300012: sourcil_d
+    4300014: pupille_d
+    4300016: oeil_d_2
+    4300018: "t\xEAte_2"
+    4300020: bras_d_MeshPart0
+    4300022: bras_d_MeshPart1
+    4300024: bras_d_MeshPart2
+    4300026: "Sph\xE8re_11"
+    4300028: Cylindre_1
+    4300030: Cube_1
+    4300032: Cylindre
+    4300034: Cube
+    4300036: bras_d_3_MeshPart0
+    4300038: bras_d_3_MeshPart1
+    4300040: bras_d_3_MeshPart2
+    4300042: torse_MeshPart0
+    4300044: torse_MeshPart1
+    4300046: torse_MeshPart2
+    4300048: pied_g
+    4300050: tibia_
+    4300052: pied_d
+    4300054: tibia__2
+    7400000: run
+    7400002: attack
+    7400004: die
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -20,7 +296,649 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: run
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Articulation
+        weight: 1
+      - path: Articulation/jambe_g
+        weight: 1
+      - path: Articulation/jambe_g/pied_g
+        weight: 1
+      - path: "Articulation/jambe_g/pied_g/Sph\xE8re_1_7"
+        weight: 1
+      - path: "Articulation/jambe_g/pied_g/Sph\xE8re_14"
+        weight: 1
+      - path: Articulation/jambe_g/tibia_
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_1_8"
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_1_9"
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_15"
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_16"
+        weight: 1
+      - path: Articulation_2
+        weight: 1
+      - path: Articulation_2/jambe_d
+        weight: 1
+      - path: Articulation_2/jambe_d/pied_d
+        weight: 1
+      - path: "Articulation_2/jambe_d/pied_d/Sph\xE8re_1_10"
+        weight: 1
+      - path: "Articulation_2/jambe_d/pied_d/Sph\xE8re_17"
+        weight: 1
+      - path: Articulation_2/jambe_d/tibia__2
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_1_11"
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_1_12"
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_18"
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_19"
+        weight: 1
+      - path: bras_d_2
+        weight: 1
+      - path: bras_d_2/arme
+        weight: 1
+      - path: bras_d_2/arme/Cube
+        weight: 1
+      - path: bras_d_2/arme/Cube_1
+        weight: 1
+      - path: bras_d_2/arme/Cylindre
+        weight: 1
+      - path: bras_d_2/arme/Cylindre_1
+        weight: 1
+      - path: "bras_d_2/arme/Sph\xE8re_11"
+        weight: 1
+      - path: bras_d_2/bras_d_3
+        weight: 1
+      - path: bras_d_2/bras_d_3/bras_d_3_MeshPart0
+        weight: 1
+      - path: bras_d_2/bras_d_3/bras_d_3_MeshPart1
+        weight: 1
+      - path: bras_d_2/bras_d_3/bras_d_3_MeshPart2
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_1_5"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_2_4"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_3_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_4_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_5_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_6_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_7_4"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_7_5"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_12"
+        weight: 1
+      - path: bras_g
+        weight: 1
+      - path: bras_g/bras_d
+        weight: 1
+      - path: bras_g/bras_d/bras_d_MeshPart0
+        weight: 1
+      - path: bras_g/bras_d/bras_d_MeshPart1
+        weight: 1
+      - path: bras_g/bras_d/bras_d_MeshPart2
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_1_4"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_2_3"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_3_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_4_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_5_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_6_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_7_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_7_3"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_10"
+        weight: 1
+      - path: torse
+        weight: 1
+      - path: "torse/Sph\xE8re_1_6"
+        weight: 1
+      - path: "torse/Sph\xE8re_2_5"
+        weight: 1
+      - path: "torse/Sph\xE8re_3_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_4_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_5_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_6_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_7_6"
+        weight: 1
+      - path: "torse/Sph\xE8re_13"
+        weight: 1
+      - path: torse/torse_MeshPart0
+        weight: 1
+      - path: torse/torse_MeshPart1
+        weight: 1
+      - path: torse/torse_MeshPart2
+        weight: 1
+      - path: "t\xEAte"
+        weight: 1
+      - path: "t\xEAte/bouche"
+        weight: 1
+      - path: "t\xEAte/bouche/bouche_2"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_d"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_g"
+        weight: 1
+      - path: "t\xEAte/oeil_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_1_2"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_7"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_8"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_5"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_6"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_d"
+        weight: 1
+      - path: "t\xEAte/oeil_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_1"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_3"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_4"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil_g"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_1_3"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_2_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_9"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: attack
+      takeName: C4D Animation Take
+      firstFrame: 50
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Articulation
+        weight: 1
+      - path: Articulation/jambe_g
+        weight: 1
+      - path: Articulation/jambe_g/pied_g
+        weight: 1
+      - path: "Articulation/jambe_g/pied_g/Sph\xE8re_1_7"
+        weight: 1
+      - path: "Articulation/jambe_g/pied_g/Sph\xE8re_14"
+        weight: 1
+      - path: Articulation/jambe_g/tibia_
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_1_8"
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_1_9"
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_15"
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_16"
+        weight: 1
+      - path: Articulation_2
+        weight: 1
+      - path: Articulation_2/jambe_d
+        weight: 1
+      - path: Articulation_2/jambe_d/pied_d
+        weight: 1
+      - path: "Articulation_2/jambe_d/pied_d/Sph\xE8re_1_10"
+        weight: 1
+      - path: "Articulation_2/jambe_d/pied_d/Sph\xE8re_17"
+        weight: 1
+      - path: Articulation_2/jambe_d/tibia__2
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_1_11"
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_1_12"
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_18"
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_19"
+        weight: 1
+      - path: bras_d_2
+        weight: 1
+      - path: bras_d_2/arme
+        weight: 1
+      - path: bras_d_2/arme/Cube
+        weight: 1
+      - path: bras_d_2/arme/Cube_1
+        weight: 1
+      - path: bras_d_2/arme/Cylindre
+        weight: 1
+      - path: bras_d_2/arme/Cylindre_1
+        weight: 1
+      - path: "bras_d_2/arme/Sph\xE8re_11"
+        weight: 1
+      - path: bras_d_2/bras_d_3
+        weight: 1
+      - path: bras_d_2/bras_d_3/bras_d_3_MeshPart0
+        weight: 1
+      - path: bras_d_2/bras_d_3/bras_d_3_MeshPart1
+        weight: 1
+      - path: bras_d_2/bras_d_3/bras_d_3_MeshPart2
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_1_5"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_2_4"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_3_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_4_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_5_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_6_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_7_4"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_7_5"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_12"
+        weight: 1
+      - path: bras_g
+        weight: 1
+      - path: bras_g/bras_d
+        weight: 1
+      - path: bras_g/bras_d/bras_d_MeshPart0
+        weight: 1
+      - path: bras_g/bras_d/bras_d_MeshPart1
+        weight: 1
+      - path: bras_g/bras_d/bras_d_MeshPart2
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_1_4"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_2_3"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_3_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_4_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_5_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_6_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_7_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_7_3"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_10"
+        weight: 1
+      - path: torse
+        weight: 1
+      - path: "torse/Sph\xE8re_1_6"
+        weight: 1
+      - path: "torse/Sph\xE8re_2_5"
+        weight: 1
+      - path: "torse/Sph\xE8re_3_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_4_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_5_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_6_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_7_6"
+        weight: 1
+      - path: "torse/Sph\xE8re_13"
+        weight: 1
+      - path: torse/torse_MeshPart0
+        weight: 1
+      - path: torse/torse_MeshPart1
+        weight: 1
+      - path: torse/torse_MeshPart2
+        weight: 1
+      - path: "t\xEAte"
+        weight: 1
+      - path: "t\xEAte/bouche"
+        weight: 1
+      - path: "t\xEAte/bouche/bouche_2"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_d"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_g"
+        weight: 1
+      - path: "t\xEAte/oeil_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_1_2"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_7"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_8"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_5"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_6"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_d"
+        weight: 1
+      - path: "t\xEAte/oeil_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_1"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_3"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_4"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil_g"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_1_3"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_2_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_9"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: die
+      takeName: C4D Animation Take
+      firstFrame: 80
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Articulation
+        weight: 1
+      - path: Articulation/jambe_g
+        weight: 1
+      - path: Articulation/jambe_g/pied_g
+        weight: 1
+      - path: "Articulation/jambe_g/pied_g/Sph\xE8re_1_7"
+        weight: 1
+      - path: "Articulation/jambe_g/pied_g/Sph\xE8re_14"
+        weight: 1
+      - path: Articulation/jambe_g/tibia_
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_1_8"
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_1_9"
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_15"
+        weight: 1
+      - path: "Articulation/jambe_g/tibia_/Sph\xE8re_16"
+        weight: 1
+      - path: Articulation_2
+        weight: 1
+      - path: Articulation_2/jambe_d
+        weight: 1
+      - path: Articulation_2/jambe_d/pied_d
+        weight: 1
+      - path: "Articulation_2/jambe_d/pied_d/Sph\xE8re_1_10"
+        weight: 1
+      - path: "Articulation_2/jambe_d/pied_d/Sph\xE8re_17"
+        weight: 1
+      - path: Articulation_2/jambe_d/tibia__2
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_1_11"
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_1_12"
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_18"
+        weight: 1
+      - path: "Articulation_2/jambe_d/tibia__2/Sph\xE8re_19"
+        weight: 1
+      - path: bras_d_2
+        weight: 1
+      - path: bras_d_2/arme
+        weight: 1
+      - path: bras_d_2/arme/Cube
+        weight: 1
+      - path: bras_d_2/arme/Cube_1
+        weight: 1
+      - path: bras_d_2/arme/Cylindre
+        weight: 1
+      - path: bras_d_2/arme/Cylindre_1
+        weight: 1
+      - path: "bras_d_2/arme/Sph\xE8re_11"
+        weight: 1
+      - path: bras_d_2/bras_d_3
+        weight: 1
+      - path: bras_d_2/bras_d_3/bras_d_3_MeshPart0
+        weight: 1
+      - path: bras_d_2/bras_d_3/bras_d_3_MeshPart1
+        weight: 1
+      - path: bras_d_2/bras_d_3/bras_d_3_MeshPart2
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_1_5"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_2_4"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_3_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_4_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_5_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_6_3"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_7_4"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_7_5"
+        weight: 1
+      - path: "bras_d_2/bras_d_3/Sph\xE8re_12"
+        weight: 1
+      - path: bras_g
+        weight: 1
+      - path: bras_g/bras_d
+        weight: 1
+      - path: bras_g/bras_d/bras_d_MeshPart0
+        weight: 1
+      - path: bras_g/bras_d/bras_d_MeshPart1
+        weight: 1
+      - path: bras_g/bras_d/bras_d_MeshPart2
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_1_4"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_2_3"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_3_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_4_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_5_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_6_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_7_2"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_7_3"
+        weight: 1
+      - path: "bras_g/bras_d/Sph\xE8re_10"
+        weight: 1
+      - path: torse
+        weight: 1
+      - path: "torse/Sph\xE8re_1_6"
+        weight: 1
+      - path: "torse/Sph\xE8re_2_5"
+        weight: 1
+      - path: "torse/Sph\xE8re_3_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_4_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_5_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_6_4"
+        weight: 1
+      - path: "torse/Sph\xE8re_7_6"
+        weight: 1
+      - path: "torse/Sph\xE8re_13"
+        weight: 1
+      - path: torse/torse_MeshPart0
+        weight: 1
+      - path: torse/torse_MeshPart1
+        weight: 1
+      - path: torse/torse_MeshPart2
+        weight: 1
+      - path: "t\xEAte"
+        weight: 1
+      - path: "t\xEAte/bouche"
+        weight: 1
+      - path: "t\xEAte/bouche/bouche_2"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_d"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_g"
+        weight: 1
+      - path: "t\xEAte/oeil_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_1_2"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_7"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_8"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_5"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_6"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_d"
+        weight: 1
+      - path: "t\xEAte/oeil_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_1"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_3"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_4"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil_g"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_1_3"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_2_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_9"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []

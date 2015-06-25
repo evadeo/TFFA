@@ -4,7 +4,136 @@ timeCreated: 1435137792
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    100000: bouche
+    100002: bouche_2
+    100004: corps
+    100006: dent_d
+    100008: dent_g
+    100010: //RootNode
+    100012: oeil_d
+    100014: oeil_d_2
+    100016: oeil_g
+    100018: oeil_g_2
+    100020: pied_d
+    100022: pied_g
+    100024: pupille_d
+    100026: pupille_g
+    100028: sourcil
+    100030: sourcil_1
+    100032: "Sph\xE8re"
+    100034: "Sph\xE8re_1"
+    100036: "Sph\xE8re_10"
+    100038: "Sph\xE8re_11"
+    100040: "Sph\xE8re_12"
+    100042: "Sph\xE8re_13"
+    100044: "Sph\xE8re_1_2"
+    100046: "Sph\xE8re_1_3"
+    100048: "Sph\xE8re_1_4"
+    100050: "Sph\xE8re_1_5"
+    100052: "Sph\xE8re_1_6"
+    100054: "Sph\xE8re_1_7"
+    100056: "Sph\xE8re_2"
+    100058: "Sph\xE8re_2_2"
+    100060: "Sph\xE8re_2_3"
+    100062: "Sph\xE8re_2_4"
+    100064: "Sph\xE8re_3"
+    100066: "Sph\xE8re_3_2"
+    100068: "Sph\xE8re_3_3"
+    100070: "Sph\xE8re_4"
+    100072: "Sph\xE8re_5"
+    100074: "Sph\xE8re_6"
+    100076: "Sph\xE8re_7"
+    100078: "Sph\xE8re_8"
+    100080: "Sph\xE8re_9"
+    100082: "t\xEAte"
+    100084: "t\xEAte_2"
+    400000: bouche
+    400002: bouche_2
+    400004: corps
+    400006: dent_d
+    400008: dent_g
+    400010: //RootNode
+    400012: oeil_d
+    400014: oeil_d_2
+    400016: oeil_g
+    400018: oeil_g_2
+    400020: pied_d
+    400022: pied_g
+    400024: pupille_d
+    400026: pupille_g
+    400028: sourcil
+    400030: sourcil_1
+    400032: "Sph\xE8re"
+    400034: "Sph\xE8re_1"
+    400036: "Sph\xE8re_10"
+    400038: "Sph\xE8re_11"
+    400040: "Sph\xE8re_12"
+    400042: "Sph\xE8re_13"
+    400044: "Sph\xE8re_1_2"
+    400046: "Sph\xE8re_1_3"
+    400048: "Sph\xE8re_1_4"
+    400050: "Sph\xE8re_1_5"
+    400052: "Sph\xE8re_1_6"
+    400054: "Sph\xE8re_1_7"
+    400056: "Sph\xE8re_2"
+    400058: "Sph\xE8re_2_2"
+    400060: "Sph\xE8re_2_3"
+    400062: "Sph\xE8re_2_4"
+    400064: "Sph\xE8re_3"
+    400066: "Sph\xE8re_3_2"
+    400068: "Sph\xE8re_3_3"
+    400070: "Sph\xE8re_4"
+    400072: "Sph\xE8re_5"
+    400074: "Sph\xE8re_6"
+    400076: "Sph\xE8re_7"
+    400078: "Sph\xE8re_8"
+    400080: "Sph\xE8re_9"
+    400082: "t\xEAte"
+    400084: "t\xEAte_2"
+    2300000: bouche_2
+    2300002: corps
+    2300004: dent_d
+    2300006: dent_g
+    2300008: oeil_d_2
+    2300010: oeil_g_2
+    2300012: pied_d
+    2300014: pied_g
+    2300016: pupille_d
+    2300018: pupille_g
+    2300020: sourcil
+    2300022: sourcil_1
+    2300024: "t\xEAte_2"
+    3300000: bouche_2
+    3300002: corps
+    3300004: dent_d
+    3300006: dent_g
+    3300008: oeil_d_2
+    3300010: oeil_g_2
+    3300012: pied_d
+    3300014: pied_g
+    3300016: pupille_d
+    3300018: pupille_g
+    3300020: sourcil
+    3300022: sourcil_1
+    3300024: "t\xEAte_2"
+    4300000: pied_d
+    4300002: pied_g
+    4300004: corps
+    4300006: dent_d
+    4300008: bouche_2
+    4300010: dent_g
+    4300012: sourcil
+    4300014: pupille_g
+    4300016: oeil_g_2
+    4300018: sourcil_1
+    4300020: pupille_d
+    4300022: oeil_d_2
+    4300024: "t\xEAte_2"
+    7400000: run
+    7400002: attack
+    7400004: die
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -20,7 +149,343 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: run
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: corps
+        weight: 1
+      - path: pied_d
+        weight: 1
+      - path: "pied_d/Sph\xE8re"
+        weight: 1
+      - path: "pied_d/Sph\xE8re_1"
+        weight: 1
+      - path: pied_g
+        weight: 1
+      - path: "pied_g/Sph\xE8re_1_2"
+        weight: 1
+      - path: "pied_g/Sph\xE8re_2"
+        weight: 1
+      - path: "t\xEAte"
+        weight: 1
+      - path: "t\xEAte/bouche"
+        weight: 1
+      - path: "t\xEAte/bouche/bouche_2"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_d"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_g"
+        weight: 1
+      - path: "t\xEAte/oeil_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_1_6"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_11"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_12"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_9"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_10"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_1_5"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_2_3"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_3_3"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_8"
+        weight: 1
+      - path: "t\xEAte/oeil_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_1_4"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_6"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_7"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re_4"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re_5"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_1_3"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_2_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_3"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_3_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_1_7"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_2_4"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_13"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: attack
+      takeName: C4D Animation Take
+      firstFrame: 50
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: corps
+        weight: 1
+      - path: pied_d
+        weight: 1
+      - path: "pied_d/Sph\xE8re"
+        weight: 1
+      - path: "pied_d/Sph\xE8re_1"
+        weight: 1
+      - path: pied_g
+        weight: 1
+      - path: "pied_g/Sph\xE8re_1_2"
+        weight: 1
+      - path: "pied_g/Sph\xE8re_2"
+        weight: 1
+      - path: "t\xEAte"
+        weight: 1
+      - path: "t\xEAte/bouche"
+        weight: 1
+      - path: "t\xEAte/bouche/bouche_2"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_d"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_g"
+        weight: 1
+      - path: "t\xEAte/oeil_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_1_6"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_11"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_12"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_9"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_10"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_1_5"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_2_3"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_3_3"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_8"
+        weight: 1
+      - path: "t\xEAte/oeil_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_1_4"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_6"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_7"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re_4"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re_5"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_1_3"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_2_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_3"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_3_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_1_7"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_2_4"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_13"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: die
+      takeName: C4D Animation Take
+      firstFrame: 80
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: corps
+        weight: 1
+      - path: pied_d
+        weight: 1
+      - path: "pied_d/Sph\xE8re"
+        weight: 1
+      - path: "pied_d/Sph\xE8re_1"
+        weight: 1
+      - path: pied_g
+        weight: 1
+      - path: "pied_g/Sph\xE8re_1_2"
+        weight: 1
+      - path: "pied_g/Sph\xE8re_2"
+        weight: 1
+      - path: "t\xEAte"
+        weight: 1
+      - path: "t\xEAte/bouche"
+        weight: 1
+      - path: "t\xEAte/bouche/bouche_2"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_d"
+        weight: 1
+      - path: "t\xEAte/bouche/dent_g"
+        weight: 1
+      - path: "t\xEAte/oeil_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_1_6"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_11"
+        weight: 1
+      - path: "t\xEAte/oeil_d/oeil_d_2/Sph\xE8re_12"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_9"
+        weight: 1
+      - path: "t\xEAte/oeil_d/pupille_d/Sph\xE8re_10"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_1_5"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_2_3"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_3_3"
+        weight: 1
+      - path: "t\xEAte/oeil_d/sourcil_1/Sph\xE8re_8"
+        weight: 1
+      - path: "t\xEAte/oeil_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_1_4"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_6"
+        weight: 1
+      - path: "t\xEAte/oeil_g/oeil_g_2/Sph\xE8re_7"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re_4"
+        weight: 1
+      - path: "t\xEAte/oeil_g/pupille_g/Sph\xE8re_5"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_1_3"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_2_2"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_3"
+        weight: 1
+      - path: "t\xEAte/oeil_g/sourcil/Sph\xE8re_3_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_1_7"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_2_4"
+        weight: 1
+      - path: "t\xEAte/t\xEAte_2/Sph\xE8re_13"
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
