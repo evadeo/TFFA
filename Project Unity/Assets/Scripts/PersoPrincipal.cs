@@ -100,6 +100,8 @@ public class PersoPrincipal : MonoBehaviour {
 	public GameObject player;
 	public Transform explosion;
 	private int compteur;
+	public static int score = 0;
+
 	void Start() {
 		Current_Xp = 0;
 		max_xp = 100;
@@ -115,7 +117,10 @@ public class PersoPrincipal : MonoBehaviour {
 			Health = PlayerPrefs.GetInt("health");
 			current_xp = PlayerPrefs.GetInt("xp");
 			level = PlayerPrefs.GetInt("level");
+			score = PlayerPrefs.GetInt("score");
 			levelUp();
+			if (PlayerPrefs.GetInt("scene") != Application.loadedLevel)
+				Application.LoadLevel(PlayerPrefs.GetInt("scene"));
 		}
 		PlayerPrefs.SetInt ("Load", 1);
 	}
@@ -160,6 +165,8 @@ public class PersoPrincipal : MonoBehaviour {
 		PlayerPrefs.SetInt ("mana", Mana);
 		PlayerPrefs.SetInt ("xp", current_xp);
 		PlayerPrefs.SetInt ("level", level);
+		PlayerPrefs.SetInt ("score", score);
+		PlayerPrefs.SetInt ("scene", Application.loadedLevel);
 		PlayerPrefs.Save ();
 	}
 
@@ -189,5 +196,9 @@ public class PersoPrincipal : MonoBehaviour {
 			Health += Max_Health / 4;
 
 	}
+
+	void OnGUI (){
+		GUI.Label (new Rect (Screen.width * 5 / 6, 20, 100, 30), "Score : " + score);
+		}
 
 }
