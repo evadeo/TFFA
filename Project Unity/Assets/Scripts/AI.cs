@@ -59,17 +59,19 @@ public class AI : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-				dirToMain = GameObject.Find ("Perso(Clone)").transform.position - transform.position;
+				dirToMain = GameObject.FindGameObjectWithTag("Player").transform.position - transform.position;
 				dirToMain.y = 0;
 	
 				move ();
 				if (Health == 0 && !dead) { 
-						Instantiate (explosion, player.transform.position, player.transform.rotation);
+						GameObject go = Instantiate (explosion, player.transform.position, player.transform.rotation) as GameObject;
 						Health = 0;
 						transform.GetComponent<Animation> ().CrossFade ("die", 0.5f * Time.deltaTime);
 						Destroy (player, 1f);
 						PersoPrincipal.Current_Xp += 50;
 						dead = true;
+			PersoPrincipal.score++;
+			Destroy(go,3f);
 				}
 		}
 
